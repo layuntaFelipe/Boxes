@@ -18,6 +18,8 @@ class BoxesViewController: UIViewController {
     var quotes = Quotes()
     var titleNavigation = String()
     
+    var boxNumber = Int()
+    
     var testNumber = Int()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -150,6 +152,9 @@ extension BoxesViewController: UICollectionViewDelegate {
         print("Hi, my name is: \(String(describing: boxArray[indexPath.row].name))")
         titleNavigation = boxArray[indexPath.row].name!
         
+        boxNumber = indexPath.row
+        print("boxNumber is: \(boxNumber)")
+        
         performSegue(withIdentifier: "CategoryToItem", sender: self)
     }
     
@@ -157,6 +162,7 @@ extension BoxesViewController: UICollectionViewDelegate {
         if segue.identifier == "CategoryToItem" {
             let destinationVC = segue.destination as! ItemsTableViewController
             destinationVC.navItem!.title = "\(titleNavigation) Items"
+            destinationVC.selectedCategory = boxArray[boxNumber]
         }
     }
     

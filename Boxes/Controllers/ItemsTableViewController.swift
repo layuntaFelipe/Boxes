@@ -16,12 +16,18 @@ class ItemsTableViewController: UITableViewController {
     var itemArray = [ToDoItems]()
     var testArray = [ToDoItems]()
     
+    var selectedCategory: BoxItems? {
+        didSet {
+            getAllItems()
+        }
+    }
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getAllItems()
+//        getAllItems()
 
     }
 
@@ -99,6 +105,11 @@ class ItemsTableViewController: UITableViewController {
     }
     
     func getAllItems(with request: NSFetchRequest<ToDoItems> = ToDoItems.fetchRequest()) {
+        
+        let predicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
+        
+        request.predicate = predicate
+        
         do {
             itemArray = try context.fetch(request)
         } catch {
@@ -120,6 +131,7 @@ class ItemsTableViewController: UITableViewController {
         newItem.title = title
         newItem.done = false
         newItem.text = text
+        newItem.parentCategory = selectedCategory
         print(newItem.title!)
         print(newItem.text!)
         itemArray.append(newItem)
