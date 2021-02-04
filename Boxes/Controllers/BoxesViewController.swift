@@ -42,6 +42,8 @@ class BoxesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
         quoteView.text = quotes.getRandomQuote()
         
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
@@ -57,18 +59,20 @@ class BoxesViewController: UIViewController {
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
         var nameTextField = UITextField()
+
         var iconTextField = UITextField()
 
         let alert = UIAlertController(title: "Add New Box", message: "", preferredStyle: .alert)
 
         let action = UIAlertAction(title: "Add Box", style: .default) { (action) in
-            
+
             self.createBox(name: nameTextField.text!, icon: iconTextField.text!)
 //            let newBox = BoxListItem()
 //            newBox.name = nameTextField.text!
 //            newBox.icon = iconTextField.text!
 //            self.test.append(newBox)
         }
+        let cancel = UIAlertAction(title: "cancel", style: .destructive, handler: nil)
 
         alert.addTextField { (textField) in
             textField.placeholder = "Icon"
@@ -76,10 +80,13 @@ class BoxesViewController: UIViewController {
         }
 
         alert.addTextField { (textField) in
-            textField.placeholder = "Create New Box"
+            textField.placeholder = "Title"
             nameTextField = textField
         }
 
+
+
+        alert.addAction(cancel)
         alert.addAction(action)
 
         present(alert, animated: true, completion: nil)
@@ -90,9 +97,9 @@ class BoxesViewController: UIViewController {
         
         print("Edit button clicked")
         
-        let cellBox = MyCollectionViewCell()
-        cellBox.deleteHidden.toggle()
+//        let cellBox = MyCollectionViewCell()
     }
+    
     
     //MARK: - Model Manupulation Methods
     

@@ -16,9 +16,12 @@ class ItemsTableViewController: UITableViewController {
     var itemArray = [ToDoItems]()
     var testArray = [ToDoItems]()
     
+    var namesArray = [String]()
+    
     var selectedCategory: BoxItems? {
         didSet {
             getAllItems()
+            tableView.reloadData()
         }
     }
     
@@ -126,11 +129,15 @@ class ItemsTableViewController: UITableViewController {
         return testArray.count
     }
     
-    func createItem(title: String, text: String) {
+    func createItem(title: String, text: String, endDate: Date?) {
         let newItem = ToDoItems(context: context)
         newItem.title = title
         newItem.done = false
         newItem.text = text
+        newItem.date = Date()
+        if endDate != nil {
+            newItem.endDate = endDate
+        }
         newItem.parentCategory = selectedCategory
         print(newItem.title!)
         print(newItem.text!)
@@ -170,36 +177,45 @@ class ItemsTableViewController: UITableViewController {
     //MARK: - Add New Item
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
-        var titleField = UITextField()
-        var textField = UITextField()
+//        var titleField = UITextField()
+//        var textView = UITextField()
+//
+//        let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
+//
+//        let cancel = UIAlertAction(title: "cancel", style: .destructive, handler: nil)
+//
+//        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+//            //what will happen once the user clicks the Add Item Button on our UIAlert
+//
+//            //Create a new Object of type NSManagedObject -> which is a row in our database
+//            //By creating the Class, it already has all the properties information we've specified
+//            //In this case: Title and Done
+//            self.createItem(title: titleField.text!, text: textView.text!)
+//
+//            //After creating we save our Items
+//            //It looks at the items in the temporary area, and save the context to our persistent store("database")
+//        }
+//
+//        alert.addTextField { (alertTextField) in
+//            alertTextField.placeholder = "title"
+//            titleField = alertTextField
+//        }
+//
+//        alert.addTextField { (alertTextField) in
+//            alertTextField.placeholder = "text"
+//            textView = alertTextField
+//        }
+//
+//        alert.addAction(cancel)
+//        alert.addAction(action)
+//
+//        present(alert, animated: true, completion: nil)
         
-        let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
+        performSegue(withIdentifier: "createNewItem", sender: self)
         
-        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            //what will happen once the user clicks the Add Item Button on our UIAlert
-            
-            //Create a new Object of type NSManagedObject -> which is a row in our database
-            //By creating the Class, it already has all the properties information we've specified
-            //In this case: Title and Done
-            self.createItem(title: titleField.text!, text: textField.text!)
-            
-            //After creating we save our Items
-            //It looks at the items in the temporary area, and save the context to our persistent store("database")
-        }
-        
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "title"
-            titleField = alertTextField
-        }
-        
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "text"
-            textField = alertTextField
-        }
-        
-        alert.addAction(action)
-        
-        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func unwindToItems(_ sender: UIStoryboardSegue) {
         
     }
 

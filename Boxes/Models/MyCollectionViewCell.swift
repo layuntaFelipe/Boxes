@@ -21,7 +21,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        deleteButtonView.isHidden = deleteHidden
+        deleteButtonView.isHidden = true
         deleteButtonView.layer.cornerRadius = deleteButtonView.bounds.size.height/2
         
         backgroundCellView.layer.cornerRadius = 10
@@ -35,6 +35,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
     }
+    
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
         print("delete box!")
     }

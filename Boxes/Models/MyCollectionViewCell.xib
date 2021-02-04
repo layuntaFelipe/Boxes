@@ -41,6 +41,9 @@
                                     <color key="titleColor" name="buttonColor"/>
                                     <imageReference key="image" image="minus" catalog="system" symbolScale="small" renderingMode="original"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="A92-UC-XMD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="backgroundBox"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271A941825C8FA0400263981 /* CreateItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A941725C8FA0400263981 /* CreateItemViewController.swift */; };
 		27583C9525C887A100FE314D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9425C887A100FE314D /* AppDelegate.swift */; };
 		27583C9725C887A100FE314D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9625C887A100FE314D /* SceneDelegate.swift */; };
 		27583C9925C887A100FE314D /* BoxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9825C887A100FE314D /* BoxesViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271A941725C8FA0400263981 /* CreateItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemViewController.swift; sourceTree = "<group>"; };
 		27583C9125C887A100FE314D /* Boxes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27583C9425C887A100FE314D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27583C9625C887A100FE314D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				27583C9825C887A100FE314D /* BoxesViewController.swift */,
 				27583CB625C88DF200FE314D /* ItemsTableViewController.swift */,
+				271A941725C8FA0400263981 /* CreateItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				27583C9925C887A100FE314D /* BoxesViewController.swift in Sources */,
 				27583CBE25C88E8F00FE314D /* MyCollectionViewCell.swift in Sources */,
 				27583C9525C887A100FE314D /* AppDelegate.swift in Sources */,
+				271A941825C8FA0400263981 /* CreateItemViewController.swift in Sources */,
 				27583CBA25C88E5100FE314D /* Quotes.swift in Sources */,
 				27583CB725C88DF200FE314D /* ItemsTableViewController.swift in Sources */,
 				27583C9725C887A100FE314D /* SceneDelegate.swift in Sources */,
@@ -333,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPPGXZ3Y59;
 				INFOPLIST_FILE = Boxes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPPGXZ3Y59;
 				INFOPLIST_FILE = Boxes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
