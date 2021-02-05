@@ -65,12 +65,12 @@ class BoxesViewController: UIViewController {
         let alert = UIAlertController(title: "Add New Box", message: "", preferredStyle: .alert)
 
         let action = UIAlertAction(title: "Add Box", style: .default) { (action) in
-
-            self.createBox(name: nameTextField.text!, icon: iconTextField.text!)
-//            let newBox = BoxListItem()
-//            newBox.name = nameTextField.text!
-//            newBox.icon = iconTextField.text!
-//            self.test.append(newBox)
+            
+            if nameTextField.text == nil || nameTextField.text == "" {
+                Alert.alertNoTitle(on: self, with: "What? No Title?", message: "How would you put something on nothing?... Serious man, get help... ;)")
+            } else {
+                self.createBox(name: nameTextField.text!, icon: iconTextField.text!)
+            }
         }
         let cancel = UIAlertAction(title: "cancel", style: .destructive, handler: nil)
 

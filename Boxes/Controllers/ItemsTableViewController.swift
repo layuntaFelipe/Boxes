@@ -30,6 +30,7 @@ class ItemsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.register(MyTableViewCell.nib(), forCellReuseIdentifier: "MyTableViewCell")
 //        getAllItems()
 
     }
@@ -42,15 +43,23 @@ class ItemsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+//
+//        let item = itemArray[indexPath.row]
+//
+//        cell.textLabel?.text = item.title
+//
+//        //Teranry Operator
+//        // value = condition ? valueIfTrue : valueIfFalse
+//        cell.accessoryType = item.done ? .checkmark : .none
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
         
         let item = itemArray[indexPath.row]
         
-        cell.textLabel?.text = item.title
-        
-        //Teranry Operator
-        // value = condition ? valueIfTrue : valueIfFalse
-        cell.accessoryType = item.done ? .checkmark : .none
+        cell.titleLabel.text = item.title
+        cell.descriptionLabel.text = item.text
+        cell.circleImageView.image = item.done ? UIImage(systemName: "checkmark.circle") : UIImage(systemName: "circle")
         
         return cell
     }
@@ -129,15 +138,11 @@ class ItemsTableViewController: UITableViewController {
         return testArray.count
     }
     
-    func createItem(title: String, text: String, endDate: Date?) {
+    func createItem(title: String, text: String) {
         let newItem = ToDoItems(context: context)
         newItem.title = title
         newItem.done = false
         newItem.text = text
-        newItem.date = Date()
-        if endDate != nil {
-            newItem.endDate = endDate
-        }
         newItem.parentCategory = selectedCategory
         print(newItem.title!)
         print(newItem.text!)
@@ -164,8 +169,9 @@ class ItemsTableViewController: UITableViewController {
         
     }
     
-    func updateBox(item: ToDoItems, newTitle: String) {
+    func updateItem(item: ToDoItems, newTitle: String, newText: String) {
         item.title = newTitle
+        item.text = newText
         
         do {
             try context.save()
@@ -176,40 +182,6 @@ class ItemsTableViewController: UITableViewController {
     
     //MARK: - Add New Item
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
-//        var titleField = UITextField()
-//        var textView = UITextField()
-//
-//        let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
-//
-//        let cancel = UIAlertAction(title: "cancel", style: .destructive, handler: nil)
-//
-//        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-//            //what will happen once the user clicks the Add Item Button on our UIAlert
-//
-//            //Create a new Object of type NSManagedObject -> which is a row in our database
-//            //By creating the Class, it already has all the properties information we've specified
-//            //In this case: Title and Done
-//            self.createItem(title: titleField.text!, text: textView.text!)
-//
-//            //After creating we save our Items
-//            //It looks at the items in the temporary area, and save the context to our persistent store("database")
-//        }
-//
-//        alert.addTextField { (alertTextField) in
-//            alertTextField.placeholder = "title"
-//            titleField = alertTextField
-//        }
-//
-//        alert.addTextField { (alertTextField) in
-//            alertTextField.placeholder = "text"
-//            textView = alertTextField
-//        }
-//
-//        alert.addAction(cancel)
-//        alert.addAction(action)
-//
-//        present(alert, animated: true, completion: nil)
         
         performSegue(withIdentifier: "createNewItem", sender: self)
         

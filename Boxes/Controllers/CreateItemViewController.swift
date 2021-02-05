@@ -17,6 +17,10 @@ class CreateItemViewController: UIViewController {
     
     var localArray = [String]()
     
+    var endDate = Date()
+    
+    var isToCreate = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +46,7 @@ class CreateItemViewController: UIViewController {
         
         if sender.isOn {
             datePickerView.isHidden = false
+            endDate = datePickerView.date
         } else {
             datePickerView.isHidden = true
         }
@@ -53,15 +58,22 @@ class CreateItemViewController: UIViewController {
         localArray = localCreateItem(title: titleTextField.text!, text: textView.text ?? "")
         print("local array: \(localArray)")
         print("dismissing newView")
-        
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as! ItemsTableViewController
-        destVC.namesArray = localArray
-        destVC.createItem(title: localArray[0], text: localArray[1])
+        
+        if titleTextField.text == nil || titleTextField.text == "" {
+            Alert.alertNoTitle(on: self, with: "What? No Title?", message: "How would you do nothing?... Serious man, get help... ;)")
+        } else {
+            if isToCreate {
+                let destVC = segue.destination as! ItemsTableViewController
+                destVC.namesArray = localArray
+                destVC.createItem(title: localArray[0], text: localArray[1])
+            } else {
+                let destVC = segue.destination as! ItemsTableViewController
+//                destVC.update
+            }
+        }
     }
     
 }
