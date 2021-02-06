@@ -22,6 +22,8 @@ class BoxesViewController: UIViewController {
     
     var testNumber = Int()
     
+    var isToDelete = false
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,7 +99,8 @@ class BoxesViewController: UIViewController {
         
         print("Edit button clicked")
         
-//        let cellBox = MyCollectionViewCell()
+        isToDelete.toggle()
+        collectionView.reloadData()
     }
     
     
@@ -137,6 +140,7 @@ class BoxesViewController: UIViewController {
             print("Error deleting box: \(error)")
         }
         
+        self.collectionView.reloadData()
     }
     
     func updateBox(box: BoxItems, newNumber: Int) {
@@ -156,13 +160,19 @@ extension BoxesViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("Hi, my name is: \(String(describing: boxArray[indexPath.row].name))")
-        titleNavigation = boxArray[indexPath.row].name!
-        
-        boxNumber = indexPath.row
-        print("boxNumber is: \(boxNumber)")
-        
-        performSegue(withIdentifier: "CategoryToItem", sender: self)
+        if !isToDelete {
+            print("Hi, my name is: \(String(describing: boxArray[indexPath.row].name))")
+            titleNavigation = boxArray[indexPath.row].name!
+            
+            boxNumber = indexPath.row
+            print("boxNumber is: \(boxNumber)")
+            
+            performSegue(withIdentifier: "CategoryToItem", sender: self)
+        } else {
+            print("I'm going to delete this box")
+            deleteBox(box: boxArray[indexPath.row])
+            boxArray.remove(at: indexPath.row)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -191,6 +201,12 @@ extension BoxesViewController: UICollectionViewDataSource {
         cell.titleView?.text = box.name
         cell.iconView?.text = box.icon
         cell.numberView.text = String(box.number)
+        
+        if isToDelete {
+            cell.numberView.text = "-"
+        } else {
+            cell.numberView.text = String(box.number)
+        }
         
         return cell
         

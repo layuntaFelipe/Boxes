@@ -14,15 +14,13 @@ class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet var iconView: UILabel!
     @IBOutlet var titleView: UILabel!
     @IBOutlet var numberView: UILabel!
-    @IBOutlet weak var deleteButtonView: UIButton!
     
-    var deleteHidden: Bool = true
+    var numberTitle = "12"
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        deleteButtonView.isHidden = true
-        deleteButtonView.layer.cornerRadius = deleteButtonView.bounds.size.height/2
+        numberView.text = numberTitle
         
         backgroundCellView.layer.cornerRadius = 10
         backgroundCellView.layer.borderWidth = 1
@@ -34,10 +32,6 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     static func nib() -> UINib {
         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
-    }
-    
-    @IBAction func deleteButtonPressed(_ sender: UIButton) {
-        print("delete box!")
     }
 
 }

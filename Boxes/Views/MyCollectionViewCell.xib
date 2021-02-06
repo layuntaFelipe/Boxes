@@ -64,18 +64,6 @@
                             <constraint firstAttribute="trailing" secondItem="Rw1-3B-jPz" secondAttribute="trailing" id="yfF-qA-9JU"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNc-5H-EgF">
-                        <rect key="frame" x="0.0" y="10" width="135" height="135"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58266395246478875" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Delete">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </state>
-                        <connections>
-                            <action selector="deleteButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="A92-UC-XMD"/>
-                        </connections>
-                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -92,7 +80,6 @@
             <connections>
                 <outlet property="backgroundCellView" destination="fJM-e1-hi6" id="kfK-Zt-gEX"/>
                 <outlet property="circleView" destination="gX0-aL-uQY" id="kHY-q8-9X1"/>
-                <outlet property="deleteButtonView" destination="CNc-5H-EgF" id="vJN-k9-Ox2"/>
                 <outlet property="iconView" destination="kWC-Ez-29A" id="6OM-fW-4Vf"/>
                 <outlet property="numberView" destination="Rw1-3B-jPz" id="xHd-pP-fYY"/>
                 <outlet property="titleView" destination="yPZ-jb-Cmh" id="UiJ-5Y-mfA"/>

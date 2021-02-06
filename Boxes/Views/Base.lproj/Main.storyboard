@@ -71,8 +71,7 @@
                                     <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="1uv-PI-nBM"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" style="done" id="rvA-F1-vML">
-                                <imageReference key="image" image="square.and.pencil" catalog="system" renderingMode="original"/>
+                            <barButtonItem title="Item" image="trash" catalog="system" style="done" id="rvA-F1-vML">
                                 <color key="tintColor" name="buttonColor"/>
                                 <connections>
                                     <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="pLC-g7-Scu"/>
@@ -283,7 +282,7 @@
     </scenes>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
-        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="backgroundBox">
             <color red="0.78200000524520874" green="0.77700001001358032" blue="0.78600001335144043" alpha="0.38299998641014099" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
