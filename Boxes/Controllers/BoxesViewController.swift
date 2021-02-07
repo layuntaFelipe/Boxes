@@ -14,7 +14,6 @@ class BoxesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var quoteView: UILabel!
     
-    var uiColors = [UIColor.green, UIColor.blue, UIColor.white, UIColor.systemPink]
     var boxArray = [BoxItems]()
     var quotes = Quotes()
     var titleNavigation = String()
@@ -28,6 +27,9 @@ class BoxesViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        print("CollectionView reloading data!")
+        collectionView.reloadData()
+        
     }
 
     override func viewDidLoad() {
@@ -35,6 +37,7 @@ class BoxesViewController: UIViewController {
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
+        // Get a random quote and show on view
         quoteView.text = quotes.getRandomQuote()
         
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
@@ -42,15 +45,17 @@ class BoxesViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        // CoreData read box data and show up on view
         getAllBoxes()
         
     }
 
-    //MARK: - Model Manupulation Methods
+    //MARK: - Buttons Models
+    
+    //Add Button - To create New Boxes
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
         var nameTextField = UITextField()
-
         var iconTextField = UITextField()
 
         let alert = UIAlertController(title: "Add New Box", message: "", preferredStyle: .alert)
@@ -75,17 +80,14 @@ class BoxesViewController: UIViewController {
             nameTextField = textField
         }
 
-
-
         alert.addAction(cancel)
         alert.addAction(action)
 
         present(alert, animated: true, completion: nil)
-        
     }
     
+    // TrashCan Button - To delete Boxes
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-        
         print("Edit button clicked")
         
         isToDelete.toggle()
@@ -98,12 +100,11 @@ class BoxesViewController: UIViewController {
             sender.image = UIImage.init(systemName: "trash")
             self.navItems.title = "Boxes"
         }
-        
     }
     
+    //MARK: - CoreDate Manupulation Methods
     
-    //MARK: - Model Manupulation Methods
-    
+    // Func Read from CoreData Class BoxItems, and make boxArray be equal to the items
     func getAllBoxes(with request: NSFetchRequest<BoxItems> = BoxItems.fetchRequest()) {
         do {
             boxArray = try context.fetch(request)
@@ -112,6 +113,7 @@ class BoxesViewController: UIViewController {
         }
     }
     
+    // Func Write to CoreData a BoxItem, append to the boxArray the new Box
     func createBox(name: String, icon: String) {
         let newBox = BoxItems(context: context)
         newBox.name = name
@@ -128,6 +130,7 @@ class BoxesViewController: UIViewController {
 
     }
     
+    // Func to Delete a Box from CoreData and boxArray
     func deleteBox(box: BoxItems) {
         
         context.delete(box)
@@ -141,6 +144,7 @@ class BoxesViewController: UIViewController {
         self.collectionView.reloadData()
     }
     
+    // Func to Update box number of items in CoreData BoxItems
     func updateBox(box: BoxItems, newNumber: Int) {
         box.number = Int64(newNumber)
         
@@ -150,7 +154,6 @@ class BoxesViewController: UIViewController {
             print("Error updating box: \(error)")
         }
     }
-    
 }
 
 //MARK: - CollectionView Delegate Methods
@@ -210,12 +213,14 @@ extension BoxesViewController: UICollectionViewDataSource {
         
         print("Creating Boxes")
         let itemsOfTheBox = ItemsTableViewController()
-        itemsOfTheBox.selectedCategory = box
-        print("Box Name: \(box.name) and box number of items: \(itemsOfTheBox.itemArray.count)")
+        itemsOfTheBox.selectedCategory = boxArray[indexPath.row]
+        print("Box Name: \(String(describing: box.name)) and box number of items: \(itemsOfTheBox.itemArray.count)")
+        
+        box.number = Int64(itemsOfTheBox.itemArray.count)
         
         cell.titleView?.text = box.name
         cell.iconView?.text = box.icon
-        cell.numberView.text = String(itemsOfTheBox.itemArray.count)
+        cell.numberView.text = String(box.number)
         
         if isToDelete {
             cell.numberView.text = "-"

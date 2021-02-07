@@ -24,6 +24,9 @@ class CreateItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         titleTextField.layer.cornerRadius = 10
         titleTextField.layer.borderWidth = 1
         titleTextField.layer.borderColor = UIColor.gray.cgColor
@@ -34,6 +37,10 @@ class CreateItemViewController: UIViewController {
         
         datePickerView.isHidden = true
         
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func localCreateItem(title: String, text: String) -> [String] {
