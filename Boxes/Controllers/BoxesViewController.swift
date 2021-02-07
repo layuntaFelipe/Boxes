@@ -20,24 +20,12 @@ class BoxesViewController: UIViewController {
     
     var boxNumber = Int()
     
-    var testNumber = Int()
-    
     var isToDelete = false
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let itemsView = ItemsTableViewController()
-        testNumber = itemsView.getAllItemsTest() ?? 0
-        
-        DispatchQueue.main.async {
-            for item in self.boxArray {
-                self.updateBox(box: item, newNumber: self.testNumber)
-            }
-            self.collectionView.reloadData()
-        }
         
     }
 
@@ -169,9 +157,21 @@ extension BoxesViewController: UICollectionViewDelegate {
             
             performSegue(withIdentifier: "CategoryToItem", sender: self)
         } else {
-            print("I'm going to delete this box")
-            deleteBox(box: boxArray[indexPath.row])
-            boxArray.remove(at: indexPath.row)
+            
+            let alert = UIAlertController(title: "Delete Box?", message: "Do You Really Want To Delete This Box and All It Has Inside?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                print("I'm going to delete this box")
+                let itemsOfTheBox = ItemsTableViewController()
+                itemsOfTheBox.selectedCategory = self.boxArray[indexPath.row]
+                for item in itemsOfTheBox.itemArray {
+                    print("deleting a item:")
+                    itemsOfTheBox.deleteItem(item: item)
+                }
+                self.deleteBox(box: self.boxArray[indexPath.row])
+                self.boxArray.remove(at: indexPath.row)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -198,9 +198,14 @@ extension BoxesViewController: UICollectionViewDataSource {
         
         let box = boxArray[indexPath.row]
         
+        print("Creating Boxes")
+        let itemsOfTheBox = ItemsTableViewController()
+        itemsOfTheBox.selectedCategory = box
+        print("Box Name: \(box.name) and box number of items: \(itemsOfTheBox.itemArray.count)")
+        
         cell.titleView?.text = box.name
         cell.iconView?.text = box.icon
-        cell.numberView.text = String(box.number)
+        cell.numberView.text = String(itemsOfTheBox.itemArray.count)
         
         if isToDelete {
             cell.numberView.text = "-"
