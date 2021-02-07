@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 
 class BoxesViewController: UIViewController {
+    @IBOutlet weak var navItems: UINavigationItem!
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var quoteView: UILabel!
@@ -89,6 +90,15 @@ class BoxesViewController: UIViewController {
         
         isToDelete.toggle()
         collectionView.reloadData()
+        
+        if isToDelete {
+            sender.image = UIImage.init(systemName: "trash.fill")
+            self.navItems.title = "Editing Mode"
+        } else {
+            sender.image = UIImage.init(systemName: "trash")
+            self.navItems.title = "Boxes"
+        }
+        
     }
     
     

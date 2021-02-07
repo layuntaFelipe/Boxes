@@ -42,11 +42,11 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="363-Mp-9EF">
-                                <rect key="frame" x="50" y="105" width="314" height="40"/>
+                                <rect key="frame" x="40" y="105" width="334" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="NMg-xq-DjE"/>
+                                    <constraint firstAttribute="height" constant="43" id="NMg-xq-DjE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -55,12 +55,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9yP-Qb-llz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="7IZ-xo-q1G"/>
-                            <constraint firstItem="9yP-Qb-llz" firstAttribute="top" secondItem="363-Mp-9EF" secondAttribute="bottom" constant="23" id="7Lq-tN-own"/>
-                            <constraint firstItem="363-Mp-9EF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="CaJ-DR-nSh"/>
+                            <constraint firstItem="9yP-Qb-llz" firstAttribute="top" secondItem="363-Mp-9EF" secondAttribute="bottom" constant="20" id="7Lq-tN-own"/>
+                            <constraint firstItem="363-Mp-9EF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="CaJ-DR-nSh"/>
                             <constraint firstAttribute="bottomMargin" secondItem="9yP-Qb-llz" secondAttribute="bottom" constant="-34" id="Egp-51-4a7"/>
                             <constraint firstItem="9yP-Qb-llz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="i4O-iR-r8F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9yP-Qb-llz" secondAttribute="trailing" constant="40" id="jiE-eU-pNY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="363-Mp-9EF" secondAttribute="trailing" constant="50" id="mjh-Ss-xQ6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="363-Mp-9EF" secondAttribute="trailing" constant="40" id="mjh-Ss-xQ6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Boxes" id="nB6-lV-G4o">
@@ -81,6 +81,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="9yP-Qb-llz" id="JbB-Ef-b60"/>
+                        <outlet property="navItems" destination="nB6-lV-G4o" id="zU4-Os-qcv"/>
                         <outlet property="quoteView" destination="363-Mp-9EF" id="PRX-pu-bZt"/>
                         <segue destination="wBl-56-ask" kind="show" identifier="CategoryToItem" id="767-iQ-PMf"/>
                     </connections>
