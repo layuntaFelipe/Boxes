@@ -168,7 +168,7 @@ extension BoxesViewController: UICollectionViewDelegate {
             performSegue(withIdentifier: "CategoryToItem", sender: self)
         } else {
             
-            let alert = UIAlertController(title: "Delete Box?", message: "Do You Really Want To Delete This Box and All It Has Inside?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Delete Box?", message: "Are You Sure You Want To Delete \(boxArray[indexPath.row].name!) Box?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                 print("I'm going to delete this box")

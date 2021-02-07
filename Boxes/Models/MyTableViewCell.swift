@@ -34,6 +34,12 @@ class MyTableViewCell: UITableViewCell {
         
     }
     
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0))
+//    }
+    
     static func nib() -> UINib {
         return UINib(nibName: "MyTableViewCell", bundle: nil)
     }

@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-Qb-llz">
-                                <rect key="frame" x="40" y="168" width="334" height="728"/>
+                                <rect key="frame" x="45" y="168" width="324" height="728"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CSy-Db-9Te">
                                     <size key="itemSize" width="128" height="128"/>
@@ -42,7 +42,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="363-Mp-9EF">
-                                <rect key="frame" x="40" y="105" width="334" height="43"/>
+                                <rect key="frame" x="30" y="105" width="354" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="NMg-xq-DjE"/>
                                 </constraints>
@@ -56,11 +56,11 @@
                         <constraints>
                             <constraint firstItem="9yP-Qb-llz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="7IZ-xo-q1G"/>
                             <constraint firstItem="9yP-Qb-llz" firstAttribute="top" secondItem="363-Mp-9EF" secondAttribute="bottom" constant="20" id="7Lq-tN-own"/>
-                            <constraint firstItem="363-Mp-9EF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="CaJ-DR-nSh"/>
+                            <constraint firstItem="363-Mp-9EF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CaJ-DR-nSh"/>
                             <constraint firstAttribute="bottomMargin" secondItem="9yP-Qb-llz" secondAttribute="bottom" constant="-34" id="Egp-51-4a7"/>
-                            <constraint firstItem="9yP-Qb-llz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="i4O-iR-r8F"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9yP-Qb-llz" secondAttribute="trailing" constant="40" id="jiE-eU-pNY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="363-Mp-9EF" secondAttribute="trailing" constant="40" id="mjh-Ss-xQ6"/>
+                            <constraint firstItem="9yP-Qb-llz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="i4O-iR-r8F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9yP-Qb-llz" secondAttribute="trailing" constant="45" id="jiE-eU-pNY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="363-Mp-9EF" secondAttribute="trailing" constant="30" id="mjh-Ss-xQ6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Boxes" id="nB6-lV-G4o">
