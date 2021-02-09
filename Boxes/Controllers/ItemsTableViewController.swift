@@ -8,9 +8,10 @@
 import UIKit
 import CoreData
 
-class ItemsTableViewController: UITableViewController {
+class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var navItem: UINavigationItem?
+    @IBOutlet var tableView: UITableView?
     
     var title2 = String()
     var itemArray = [ToDoItems]()
@@ -21,7 +22,7 @@ class ItemsTableViewController: UITableViewController {
     var selectedCategory: BoxItems? {
         didSet {
             getAllItems()
-            tableView.reloadData()
+            tableView?.reloadData()
         }
     }
     
@@ -30,18 +31,20 @@ class ItemsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(MyTableViewCell.nib(), forCellReuseIdentifier: "MyTableViewCell")
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        tableView?.register(MyTableViewCell.nib(), forCellReuseIdentifier: "MyTableViewCell")
 //        getAllItems()
 
     }
 
     //MARK: - Tableview Datasource Methods
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
 //
@@ -57,6 +60,7 @@ class ItemsTableViewController: UITableViewController {
         
         let item = itemArray[indexPath.row]
         
+        cell.backgroundColor = UIColor.clear
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.text
         cell.circleImageView.image = item.done ? UIImage(systemName: "checkmark.circle") : UIImage(systemName: "circle")
@@ -64,11 +68,11 @@ class ItemsTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
             
@@ -82,7 +86,7 @@ class ItemsTableViewController: UITableViewController {
     
     //MARK: - TableView Delegate Methods
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!)")
@@ -93,7 +97,7 @@ class ItemsTableViewController: UITableViewController {
             print("YEEE IT's DONE")
         }
         
-        self.tableView.reloadData()
+        self.tableView?.reloadData()
         
         //Deleting from database, the order matters a huge deal
 //        context.delete(itemArray[indexPath.row])
@@ -147,7 +151,7 @@ class ItemsTableViewController: UITableViewController {
         print(newItem.title!)
         print(newItem.text!)
         itemArray.append(newItem)
-        self.tableView.reloadData()
+        self.tableView?.reloadData()
         
         do {
             try context.save()
