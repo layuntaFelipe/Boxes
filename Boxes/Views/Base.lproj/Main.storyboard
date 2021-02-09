@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4p4-hd-yjC">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -12,6 +12,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Animation View Controller-->
+        <scene sceneID="xkO-zj-bb0">
+            <objects>
+                <viewController id="8Zq-qw-TrT" customClass="AnimationViewController" customModule="Boxes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qU3-x0-it9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="C59-yv-Agd">
+                                <rect key="frame" x="121" y="394" width="172" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y7P-dc-b5I"/>
+                        <color key="backgroundColor" name="backgroundView"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Cy-y6-Crm"/>
+                    <connections>
+                        <outlet property="imageView" destination="C59-yv-Agd" id="3W4-gq-qQg"/>
+                        <outlet property="view" destination="qU3-x0-it9" id="iOS-Ah-TjC"/>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="animationToBoxes" animates="NO" id="ru3-oJ-sgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfI-tf-b0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="98"/>
+        </scene>
         <!--Boxes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -289,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="1505.7971014492755" y="843.75"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav View Controller-->
         <scene sceneID="Uus-4Q-fk2">
             <objects>
-                <navigationController id="4p4-hd-yjC" sceneMemberID="viewController">
+                <navigationController id="4p4-hd-yjC" customClass="NavViewController" customModule="Boxes" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="egr-W9-s0g">
                         <rect key="frame" x="0.0" y="44" width="414" height="96.5"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -306,15 +333,16 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Sv0-Ex-rol"/>
+                        <segue destination="8Zq-qw-TrT" kind="relationship" relationship="rootViewController" id="rzK-C4-ApC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vt-4h-3Kh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-516" y="98"/>
+            <point key="canvasLocation" x="-1281" y="98"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icon" width="520.5" height="520.5"/>
         <image name="backgroundImage" width="768" height="768"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="trash" catalog="system" width="121" height="128"/>
