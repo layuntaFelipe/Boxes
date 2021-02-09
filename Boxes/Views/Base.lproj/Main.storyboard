@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4p4-hd-yjC">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-Qb-llz">
-                                <rect key="frame" x="45" y="220" width="324" height="676"/>
+                                <rect key="frame" x="45" y="220.5" width="324" height="675.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CSy-Db-9Te">
@@ -45,12 +45,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="363-Mp-9EF">
-                                <rect key="frame" x="30" y="150" width="354" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“The Future Belongs To The Competent. Get Good, Get Better, Be The Best!” – Brian Tracy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="363-Mp-9EF">
+                                <rect key="frame" x="30" y="150.5" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NMg-xq-DjE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="systemBackgroundColor"/>
@@ -114,7 +114,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fUv-uw-XLd">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="140.5" width="414" height="755.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -252,7 +252,6 @@
                             <constraint firstItem="WW3-H4-GOW" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="22" id="6aX-7f-e12"/>
                             <constraint firstItem="l5Y-FF-g51" firstAttribute="top" secondItem="amQ-DN-2sm" secondAttribute="top" constant="73" id="6r5-A0-2Eo"/>
                             <constraint firstItem="Obu-Jj-Zai" firstAttribute="trailing" secondItem="ilY-hz-hOA" secondAttribute="trailing" id="7GY-Ov-h61"/>
-                            <constraint firstItem="WYe-gg-3H3" firstAttribute="leading" secondItem="l5Y-FF-g51" secondAttribute="trailing" constant="169" id="B2i-0k-w9j"/>
                             <constraint firstItem="l5Y-FF-g51" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="EPV-Sz-Nel"/>
                             <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="4vI-bv-1KW" secondAttribute="trailing" constant="265" id="Khd-5H-o1z"/>
                             <constraint firstItem="WYe-gg-3H3" firstAttribute="top" secondItem="amQ-DN-2sm" secondAttribute="top" constant="73" id="LdE-S9-H9P"/>
@@ -295,8 +294,16 @@
             <objects>
                 <navigationController id="4p4-hd-yjC" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="egr-W9-s0g">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="36"/>
+                            <color key="textShadowColor" name="buttonColor"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Sv0-Ex-rol"/>
@@ -308,7 +315,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundImage" width="341" height="341"/>
+        <image name="backgroundImage" width="768" height="768"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="backgroundBox">

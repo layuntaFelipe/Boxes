@@ -46,16 +46,6 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
-//
-//        let item = itemArray[indexPath.row]
-//
-//        cell.textLabel?.text = item.title
-//
-//        //Teranry Operator
-//        // value = condition ? valueIfTrue : valueIfFalse
-//        cell.accessoryType = item.done ? .checkmark : .none
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
         
         let item = itemArray[indexPath.row]

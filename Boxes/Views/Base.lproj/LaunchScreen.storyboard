@@ -19,48 +19,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D  O  -  M  O  R  E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZu-bl-vf6">
-                                <rect key="frame" x="146" y="513" width="113" height="10"/>
+                                <rect key="frame" x="150.5" y="512.5" width="113" height="10"/>
                                 <color key="tintColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="FIC-pK-0Kx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="Kqt-pO-vVJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fv4-9X-od9">
-                                <rect key="frame" x="127" y="369" width="151" height="140"/>
-                                <color key="tintColor" name="buttonColor"/>
-                                <imageReference key="image" image="shippingbox" catalog="system" symbolScale="large"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B  E  -  B  E  T  T  E  R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FD-rF-beI">
-                                <rect key="frame" x="127" y="353" width="151" height="10"/>
+                                <rect key="frame" x="135.5" y="373.5" width="143" height="10"/>
                                 <color key="tintColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="KwY-Y7-sEb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="wBS-gC-PPa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-aY-lfb">
-                                <rect key="frame" x="238" y="395" width="29" height="30"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fv4-9X-od9">
+                                <rect key="frame" x="121" y="393.5" width="172" height="109"/>
+                                <color key="tintColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="XvF-y4-hO4"/>
+                                    <constraint firstAttribute="height" constant="109" id="tcm-fe-GUG"/>
+                                </constraints>
+                                <imageReference key="image" image="Icon" symbolScale="large"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="backgroundView"/>
                         <constraints>
-                            <constraint firstItem="KZu-bl-vf6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="4A6-2K-y1f"/>
-                            <constraint firstItem="4FD-rF-beI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="55v-cK-Dp4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4FD-rF-beI" secondAttribute="trailing" constant="136" id="62f-o4-QG2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KZu-bl-vf6" secondAttribute="bottom" constant="339" id="EYU-gn-pBH"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Fv4-9X-od9" secondAttribute="bottom" constant="356" id="ONb-b1-L1S"/>
-                            <constraint firstItem="4FD-rF-beI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="309" id="PET-8q-ol6"/>
-                            <constraint firstItem="Fv4-9X-od9" firstAttribute="top" secondItem="4FD-rF-beI" secondAttribute="bottom" constant="8.5" id="SlL-hW-IKl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KZu-bl-vf6" secondAttribute="trailing" constant="155" id="UaO-Tp-Y8z"/>
-                            <constraint firstItem="Fv4-9X-od9" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="327.5" id="Vgw-wm-rLa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nhr-aY-lfb" secondAttribute="trailing" constant="127" id="Yse-jU-YtZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fv4-9X-od9" secondAttribute="trailing" constant="136" id="a5A-5N-qjt"/>
-                            <constraint firstItem="KZu-bl-vf6" firstAttribute="top" secondItem="Fv4-9X-od9" secondAttribute="bottom" constant="7" id="chm-i2-837"/>
-                            <constraint firstItem="Nhr-aY-lfb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="350.5" id="euI-ug-Y2M"/>
-                            <constraint firstItem="Fv4-9X-od9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="fDd-cV-edR"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Nhr-aY-lfb" secondAttribute="bottom" constant="436.5" id="iPH-32-Dzc"/>
-                            <constraint firstItem="Nhr-aY-lfb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="218" id="kyS-9q-It8"/>
+                            <constraint firstItem="KZu-bl-vf6" firstAttribute="top" secondItem="Fv4-9X-od9" secondAttribute="bottom" constant="10" id="O5Y-bB-zxp"/>
+                            <constraint firstItem="Fv4-9X-od9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Pgf-bp-IKn"/>
+                            <constraint firstItem="KZu-bl-vf6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S1I-mx-2g8"/>
+                            <constraint firstItem="4FD-rF-beI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XXl-wW-xNC"/>
+                            <constraint firstItem="Fv4-9X-od9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Yvu-Rs-znf"/>
+                            <constraint firstItem="Fv4-9X-od9" firstAttribute="top" secondItem="4FD-rF-beI" secondAttribute="bottom" constant="10" id="uEh-M4-5Mc"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -70,8 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="shippingbox" catalog="system" width="128" height="124"/>
+        <image name="Icon" width="520.5" height="520.5"/>
         <namedColor name="backgroundView">
             <color red="0.99400001764297485" green="0.98799997568130493" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
