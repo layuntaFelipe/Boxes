@@ -13,9 +13,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var navItem: UINavigationItem?
     @IBOutlet var tableView: UITableView?
     
-    var title2 = String()
     var itemArray = [ToDoItems]()
-    var testArray = [ToDoItems]()
     
     var namesArray = [String]()
     
@@ -34,7 +32,6 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.register(MyTableViewCell.nib(), forCellReuseIdentifier: "MyTableViewCell")
-//        getAllItems()
 
     }
 
@@ -53,7 +50,14 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.backgroundColor = UIColor.clear
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.text
-        cell.circleImageView.image = item.done ? UIImage(systemName: "checkmark.circle") : UIImage(systemName: "circle")
+        if item.hasDeadLine {
+            cell.redView.isHidden = false
+        } else {
+            cell.redView.isHidden =  true
+            //Search about Date Formating into a custom String
+//            cell.endDateLabel.text = item.endDate
+        }
+        cell.circleImageView.image = item.done ? UIImage(systemName: "checkmark.circle.fill") : UIImage(systemName: "circle")
         
         return cell
     }
@@ -86,18 +90,9 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         if itemArray[indexPath.row].done == true {
             print("YEEE IT's DONE")
         }
-        
         self.tableView?.reloadData()
-        
-        //Deleting from database, the order matters a huge deal
-//        context.delete(itemArray[indexPath.row])
-//        itemArray.remove(at: indexPath.row)
-        
         //Every time you change the database, call this:
         self.saveItems()
-        
-//        print(itemArray[indexPath.row].done)
-        
     }
     
     //MARK: - Model Manupulation Methods
@@ -111,11 +106,8 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func getAllItems(with request: NSFetchRequest<ToDoItems> = ToDoItems.fetchRequest()) {
-        
         let predicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
-        
         request.predicate = predicate
-        
         do {
             itemArray = try context.fetch(request)
         } catch {
@@ -123,50 +115,42 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func getAllItemsTest(with request: NSFetchRequest<ToDoItems> = ToDoItems.fetchRequest()) -> Int? {
-        do {
-            testArray = try context.fetch(request)
-        } catch {
-            print("Error fetching allItems : \(error)")
-        }
-        return testArray.count
-    }
-    
-    func createItem(title: String, text: String) {
+    func createItem(title: String, text: String, deadLine: Bool, endDate: Date) {
         let newItem = ToDoItems(context: context)
         newItem.title = title
         newItem.done = false
         newItem.text = text
+        newItem.date = Date()
+        newItem.hasDeadLine = deadLine
+        if newItem.hasDeadLine {
+            newItem.endDate = endDate
+        }
         newItem.parentCategory = selectedCategory
+        // The endDate is NOT changing as the DatePicker Changes!
+        print("The endDate is: \(String(describing: newItem.endDate))")
         print(newItem.title!)
         print(newItem.text!)
         itemArray.append(newItem)
         self.tableView?.reloadData()
-        
         do {
             try context.save()
         } catch {
             print("Error creating and saving new item :\(error)")
         }
-
     }
     
     func deleteItem(item: ToDoItems) {
-        
         context.delete(item)
-        
         do {
             try context.save()
         } catch {
             print("Error deleting item: \(error)")
         }
-        
     }
     
     func updateItem(item: ToDoItems, newTitle: String, newText: String) {
         item.title = newTitle
         item.text = newText
-        
         do {
             try context.save()
         } catch {
@@ -176,13 +160,9 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //MARK: - Add New Item
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
         performSegue(withIdentifier: "createNewItem", sender: self)
-        
     }
     
-    @IBAction func unwindToItems(_ sender: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindToItems(_ sender: UIStoryboardSegue) {}
 
 }

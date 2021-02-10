@@ -273,34 +273,42 @@
                         <viewLayoutGuide key="safeArea" id="amQ-DN-2sm"/>
                         <color key="backgroundColor" name="backgroundView"/>
                         <constraints>
-                            <constraint firstItem="EfR-Yg-FGh" firstAttribute="leading" secondItem="uqK-y2-K9g" secondAttribute="trailing" constant="225" id="00g-3f-fhI"/>
-                            <constraint firstItem="4vI-bv-1KW" firstAttribute="top" secondItem="Obu-Jj-Zai" secondAttribute="bottom" constant="29" id="0c4-Nj-lsm"/>
-                            <constraint firstItem="uqK-y2-K9g" firstAttribute="top" secondItem="ilY-hz-hOA" secondAttribute="bottom" constant="30" id="67H-Pf-IqP"/>
-                            <constraint firstItem="WW3-H4-GOW" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="22" id="6aX-7f-e12"/>
-                            <constraint firstItem="l5Y-FF-g51" firstAttribute="top" secondItem="amQ-DN-2sm" secondAttribute="top" constant="73" id="6r5-A0-2Eo"/>
-                            <constraint firstItem="Obu-Jj-Zai" firstAttribute="trailing" secondItem="ilY-hz-hOA" secondAttribute="trailing" id="7GY-Ov-h61"/>
-                            <constraint firstItem="l5Y-FF-g51" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="EPV-Sz-Nel"/>
-                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="4vI-bv-1KW" secondAttribute="trailing" constant="265" id="Khd-5H-o1z"/>
-                            <constraint firstItem="WYe-gg-3H3" firstAttribute="top" secondItem="amQ-DN-2sm" secondAttribute="top" constant="73" id="LdE-S9-H9P"/>
-                            <constraint firstItem="amQ-DN-2sm" firstAttribute="bottom" secondItem="WW3-H4-GOW" secondAttribute="bottom" constant="222" id="OTY-n5-1YI"/>
-                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="ilY-hz-hOA" secondAttribute="trailing" constant="20" id="OXm-of-mwH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="l5Y-FF-g51" secondAttribute="trailing" constant="220" id="ROo-k2-aeK"/>
-                            <constraint firstItem="Obu-Jj-Zai" firstAttribute="top" secondItem="WYe-gg-3H3" secondAttribute="bottom" constant="94" id="Sq8-oC-eDC"/>
-                            <constraint firstItem="Obu-Jj-Zai" firstAttribute="top" secondItem="er5-KW-65A" secondAttribute="bottom" constant="4" id="Uxx-bE-CEa"/>
-                            <constraint firstItem="4vI-bv-1KW" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="WWF-tK-g9T"/>
-                            <constraint firstItem="er5-KW-65A" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="YBF-ve-QvT"/>
-                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="er5-KW-65A" secondAttribute="trailing" constant="342" id="Zay-aX-z9A"/>
-                            <constraint firstItem="WW3-H4-GOW" firstAttribute="top" secondItem="uqK-y2-K9g" secondAttribute="bottom" constant="8" id="a6u-Gf-4vH"/>
-                            <constraint firstItem="EfR-Yg-FGh" firstAttribute="top" secondItem="ilY-hz-hOA" secondAttribute="bottom" constant="29" id="dSM-Pu-ost"/>
-                            <constraint firstItem="ilY-hz-hOA" firstAttribute="top" secondItem="4vI-bv-1KW" secondAttribute="bottom" constant="4" id="fc3-rG-Xil"/>
-                            <constraint firstItem="Obu-Jj-Zai" firstAttribute="leading" secondItem="er5-KW-65A" secondAttribute="leading" id="jG1-EI-54h"/>
-                            <constraint firstItem="er5-KW-65A" firstAttribute="top" secondItem="l5Y-FF-g51" secondAttribute="bottom" constant="64" id="jhk-ZS-K06"/>
-                            <constraint firstItem="ilY-hz-hOA" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="p7W-oo-0pX"/>
-                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="WYe-gg-3H3" secondAttribute="trailing" constant="21" id="pqL-po-cXr"/>
-                            <constraint firstItem="amQ-DN-2sm" firstAttribute="bottom" secondItem="l5Y-FF-g51" secondAttribute="bottom" constant="693" id="tru-Rm-XFu"/>
-                            <constraint firstItem="ilY-hz-hOA" firstAttribute="top" secondItem="4vI-bv-1KW" secondAttribute="bottom" constant="4" id="vJh-Lz-Ftz"/>
-                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="WW3-H4-GOW" secondAttribute="trailing" constant="238" id="xfV-M9-XWn"/>
-                            <constraint firstItem="uqK-y2-K9g" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="zR0-st-6eN"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="WYe-gg-3H3" secondAttribute="trailing" constant="21" id="0bJ-1i-t6J"/>
+                            <constraint firstItem="uqK-y2-K9g" firstAttribute="top" secondItem="er5-KW-65A" secondAttribute="bottom" constant="303" id="1o9-ko-fPq"/>
+                            <constraint firstItem="l5Y-FF-g51" firstAttribute="top" secondItem="amQ-DN-2sm" secondAttribute="top" constant="73" id="2dB-Sh-Zss"/>
+                            <constraint firstItem="ilY-hz-hOA" firstAttribute="top" secondItem="4vI-bv-1KW" secondAttribute="bottom" constant="4" id="2kX-Yb-5sM"/>
+                            <constraint firstItem="WW3-H4-GOW" firstAttribute="top" secondItem="Obu-Jj-Zai" secondAttribute="bottom" constant="302" id="4zf-EW-i36"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="bottom" secondItem="WW3-H4-GOW" secondAttribute="bottom" constant="222" id="7B4-ZG-OKk"/>
+                            <constraint firstItem="EfR-Yg-FGh" firstAttribute="top" secondItem="WYe-gg-3H3" secondAttribute="bottom" constant="392" id="7O1-Yg-4tA"/>
+                            <constraint firstItem="WW3-H4-GOW" firstAttribute="top" secondItem="uqK-y2-K9g" secondAttribute="bottom" constant="8" symbolic="YES" id="DnV-EV-H14"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="bottom" secondItem="EfR-Yg-FGh" secondAttribute="bottom" constant="266" id="HgZ-l9-y1p"/>
+                            <constraint firstItem="WYe-gg-3H3" firstAttribute="top" secondItem="amQ-DN-2sm" secondAttribute="top" constant="73" id="KT6-Bj-Mmd"/>
+                            <constraint firstItem="WYe-gg-3H3" firstAttribute="leading" secondItem="l5Y-FF-g51" secondAttribute="trailing" constant="169" id="Kx8-ie-n49"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="er5-KW-65A" secondAttribute="trailing" constant="342" id="Lf0-BY-lgu"/>
+                            <constraint firstItem="er5-KW-65A" firstAttribute="top" secondItem="l5Y-FF-g51" secondAttribute="bottom" constant="64" id="P5o-lE-kgc"/>
+                            <constraint firstItem="uqK-y2-K9g" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="Pgv-2L-E0f"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="uqK-y2-K9g" secondAttribute="trailing" constant="295" id="TrE-tE-yf9"/>
+                            <constraint firstItem="WW3-H4-GOW" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="22" id="Vfr-eH-GQe"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="4vI-bv-1KW" secondAttribute="trailing" constant="265" id="WNU-ql-8pM"/>
+                            <constraint firstItem="EfR-Yg-FGh" firstAttribute="top" secondItem="amQ-DN-2sm" secondAttribute="top" constant="511" id="X67-Nr-S5I"/>
+                            <constraint firstItem="EfR-Yg-FGh" firstAttribute="leading" secondItem="uqK-y2-K9g" secondAttribute="trailing" constant="225" id="Yb6-i8-UlF"/>
+                            <constraint firstItem="4vI-bv-1KW" firstAttribute="top" secondItem="Obu-Jj-Zai" secondAttribute="bottom" constant="29" id="aAf-ld-WxP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="l5Y-FF-g51" secondAttribute="bottom" constant="693" id="bhx-Jb-G3e"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="EfR-Yg-FGh" secondAttribute="trailing" constant="23" id="cBy-D4-8Cs"/>
+                            <constraint firstItem="l5Y-FF-g51" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="cLc-Nl-IDs"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="Obu-Jj-Zai" secondAttribute="trailing" constant="20" id="dJZ-7H-85F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l5Y-FF-g51" secondAttribute="trailing" constant="220" id="dKv-hy-f6b"/>
+                            <constraint firstItem="EfR-Yg-FGh" firstAttribute="top" secondItem="ilY-hz-hOA" secondAttribute="bottom" constant="29" id="gcR-t5-wy0"/>
+                            <constraint firstItem="WW3-H4-GOW" firstAttribute="top" secondItem="l5Y-FF-g51" secondAttribute="bottom" constant="435" id="irc-u1-8g9"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="WW3-H4-GOW" secondAttribute="trailing" constant="238" id="jMl-Jm-6Tx"/>
+                            <constraint firstItem="WW3-H4-GOW" firstAttribute="top" secondItem="er5-KW-65A" secondAttribute="bottom" constant="341" id="jUe-mP-52f"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="ilY-hz-hOA" secondAttribute="trailing" constant="20" id="jpM-NR-DQ9"/>
+                            <constraint firstItem="ilY-hz-hOA" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="lGw-lk-7i4"/>
+                            <constraint firstItem="4vI-bv-1KW" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="n2O-Ew-lct"/>
+                            <constraint firstItem="Obu-Jj-Zai" firstAttribute="top" secondItem="er5-KW-65A" secondAttribute="bottom" constant="4" id="or1-qt-4Wh"/>
+                            <constraint firstItem="WW3-H4-GOW" firstAttribute="top" secondItem="4vI-bv-1KW" secondAttribute="bottom" constant="243" id="x97-cE-hmR"/>
+                            <constraint firstItem="Obu-Jj-Zai" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="xeN-Zl-i8f"/>
+                            <constraint firstItem="er5-KW-65A" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="zlv-WR-U6n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I0M-ss-Fz4"/>
@@ -325,10 +333,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textShadowColor" name="shadowTitle"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="36"/>
-                            <color key="textShadowColor" name="buttonColor"/>
+                            <color key="textShadowColor" name="shadowTitle"/>
                             <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
                         </textAttributes>
                     </navigationBar>
@@ -354,6 +363,9 @@
         </namedColor>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="shadowTitle">
+            <color red="0.26770968264248707" green="0.26770968264248707" blue="0.26770968264248707" alpha="0.75833516725352113" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -19,6 +19,8 @@ class CreateItemViewController: UIViewController {
     
     var endDate = Date()
     
+    var deadLine = false
+    
     var isToCreate = true
     
     override func viewDidLoad() {
@@ -52,9 +54,11 @@ class CreateItemViewController: UIViewController {
     @IBAction func switchButtonPressed(_ sender: UISwitch) {
         
         if sender.isOn {
+            deadLine = true
             datePickerView.isHidden = false
             endDate = datePickerView.date
         } else {
+            deadLine = false
             datePickerView.isHidden = true
         }
         
@@ -75,7 +79,7 @@ class CreateItemViewController: UIViewController {
             if isToCreate {
                 let destVC = segue.destination as! ItemsTableViewController
                 destVC.namesArray = localArray
-                destVC.createItem(title: localArray[0], text: localArray[1])
+                destVC.createItem(title: localArray[0], text: localArray[1], deadLine: deadLine, endDate: endDate)
             } else {
                 let destVC = segue.destination as! ItemsTableViewController
 //                destVC.update

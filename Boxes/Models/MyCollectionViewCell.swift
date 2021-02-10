@@ -20,8 +20,13 @@ class MyCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        let layer = CAGradientLayer()
+        layer.frame = backgroundCellView.bounds
+        layer.colors = [UIColor(named: "gradientColor1")!, UIColor(named: "gradientColor2")!]
+        
         numberView.text = numberTitle
         
+        backgroundCellView.setGradient(topColor: Colors.topColor!, buttomColor: Colors.buttomColor!)
         backgroundCellView.layer.cornerRadius = 10
         backgroundCellView.layer.borderWidth = 1
         backgroundCellView.layer.borderColor = UIColor.gray.cgColor

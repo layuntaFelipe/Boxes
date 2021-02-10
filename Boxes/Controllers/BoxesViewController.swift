@@ -11,8 +11,8 @@ import CoreData
 class BoxesViewController: UIViewController {
     @IBOutlet weak var navItems: UINavigationItem!
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var quoteView: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView?
+    @IBOutlet weak var quoteView: UILabel?
     
     var boxArray = [BoxItems]()
     var quotes = Quotes()
@@ -24,11 +24,17 @@ class BoxesViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationItem.hidesBackButton = true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         print("CollectionView reloading data!")
-        collectionView.reloadData()
+        collectionView?.reloadData()
         
     }
 
@@ -38,12 +44,12 @@ class BoxesViewController: UIViewController {
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         // Get a random quote and show on view
-        quoteView.text = quotes.getRandomQuote()
+        quoteView?.text = quotes.getRandomQuote()
         
-        collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
+        collectionView?.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
         
         // CoreData read box data and show up on view
         getAllBoxes()
@@ -91,7 +97,7 @@ class BoxesViewController: UIViewController {
         print("Edit button clicked")
         
         isToDelete.toggle()
-        collectionView.reloadData()
+        collectionView?.reloadData()
         
         if isToDelete {
             sender.image = UIImage.init(systemName: "trash.fill")
@@ -120,7 +126,7 @@ class BoxesViewController: UIViewController {
         newBox.icon = icon
         newBox.number = 0
         boxArray.append(newBox)
-        self.collectionView.reloadData()
+        self.collectionView?.reloadData()
         
         do {
             try context.save()
@@ -141,7 +147,7 @@ class BoxesViewController: UIViewController {
             print("Error deleting box: \(error)")
         }
         
-        self.collectionView.reloadData()
+        self.collectionView?.reloadData()
     }
     
     // Func to Update box number of items in CoreData BoxItems
