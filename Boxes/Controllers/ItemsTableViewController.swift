@@ -47,15 +47,18 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let item = itemArray[indexPath.row]
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd"
+        
         cell.backgroundColor = UIColor.clear
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.text
         if item.hasDeadLine {
             cell.redView.isHidden = false
+            cell.endDateLabel.text = dateFormatter.string(from: item.endDate!)
         } else {
             cell.redView.isHidden =  true
             //Search about Date Formating into a custom String
-//            cell.endDateLabel.text = item.endDate
         }
         cell.circleImageView.image = item.done ? UIImage(systemName: "checkmark.circle.fill") : UIImage(systemName: "circle")
         
@@ -127,7 +130,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         newItem.parentCategory = selectedCategory
         // The endDate is NOT changing as the DatePicker Changes!
-        print("The endDate is: \(String(describing: newItem.endDate))")
+        print("The newItem endDate is: \(newItem.endDate)")
         print(newItem.title!)
         print(newItem.text!)
         itemArray.append(newItem)

@@ -56,17 +56,22 @@ class CreateItemViewController: UIViewController {
         if sender.isOn {
             deadLine = true
             datePickerView.isHidden = false
-            endDate = datePickerView.date
         } else {
             deadLine = false
             datePickerView.isHidden = true
         }
         
     }
+    @IBAction func datePickerOpened(_ sender: UIDatePicker) {
+        endDate = sender.date
+        print(endDate)
+    }
     
     @IBAction func checkButton(_ sender: UIButton) {
         
         localArray = localCreateItem(title: titleTextField.text!, text: textView.text ?? "")
+        //Solve the problem in case of not having a endDate
+        print("The endDate is equal to: \(endDate)")
         print("local array: \(localArray)")
         print("dismissing newView")
     }
@@ -81,7 +86,7 @@ class CreateItemViewController: UIViewController {
                 destVC.namesArray = localArray
                 destVC.createItem(title: localArray[0], text: localArray[1], deadLine: deadLine, endDate: endDate)
             } else {
-                let destVC = segue.destination as! ItemsTableViewController
+//                let destVC = segue.destination as! ItemsTableViewController
 //                destVC.update
             }
         }

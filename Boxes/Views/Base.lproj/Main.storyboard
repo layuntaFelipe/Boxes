@@ -246,8 +246,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EndDate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqK-y2-K9g">
-                                <rect key="frame" x="20" y="512" width="99" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeadLine:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqK-y2-K9g">
+                                <rect key="frame" x="20" y="512" width="113" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -268,6 +268,9 @@
                                     <constraint firstAttribute="width" constant="154" id="DPg-RW-Maa"/>
                                     <constraint firstAttribute="height" constant="36" id="oYK-TY-9MT"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="datePickerOpened:" destination="814-hJ-Egw" eventType="valueChanged" id="xix-Tc-ceL"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="amQ-DN-2sm"/>
@@ -287,11 +290,11 @@
                             <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="er5-KW-65A" secondAttribute="trailing" constant="342" id="Lf0-BY-lgu"/>
                             <constraint firstItem="er5-KW-65A" firstAttribute="top" secondItem="l5Y-FF-g51" secondAttribute="bottom" constant="64" id="P5o-lE-kgc"/>
                             <constraint firstItem="uqK-y2-K9g" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="20" id="Pgv-2L-E0f"/>
-                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="uqK-y2-K9g" secondAttribute="trailing" constant="295" id="TrE-tE-yf9"/>
+                            <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="uqK-y2-K9g" secondAttribute="trailing" constant="281" id="TrE-tE-yf9"/>
                             <constraint firstItem="WW3-H4-GOW" firstAttribute="leading" secondItem="amQ-DN-2sm" secondAttribute="leading" constant="22" id="Vfr-eH-GQe"/>
                             <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="4vI-bv-1KW" secondAttribute="trailing" constant="265" id="WNU-ql-8pM"/>
                             <constraint firstItem="EfR-Yg-FGh" firstAttribute="top" secondItem="amQ-DN-2sm" secondAttribute="top" constant="511" id="X67-Nr-S5I"/>
-                            <constraint firstItem="EfR-Yg-FGh" firstAttribute="leading" secondItem="uqK-y2-K9g" secondAttribute="trailing" constant="225" id="Yb6-i8-UlF"/>
+                            <constraint firstItem="EfR-Yg-FGh" firstAttribute="leading" secondItem="uqK-y2-K9g" secondAttribute="trailing" constant="211" id="Yb6-i8-UlF"/>
                             <constraint firstItem="4vI-bv-1KW" firstAttribute="top" secondItem="Obu-Jj-Zai" secondAttribute="bottom" constant="29" id="aAf-ld-WxP"/>
                             <constraint firstAttribute="bottomMargin" secondItem="l5Y-FF-g51" secondAttribute="bottom" constant="693" id="bhx-Jb-G3e"/>
                             <constraint firstItem="amQ-DN-2sm" firstAttribute="trailing" secondItem="EfR-Yg-FGh" secondAttribute="trailing" constant="23" id="cBy-D4-8Cs"/>
@@ -365,7 +368,7 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="shadowTitle">
-            <color red="0.26770968264248707" green="0.26770968264248707" blue="0.26770968264248707" alpha="0.75833516725352113" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.26800000667572021" green="0.26800000667572021" blue="0.26800000667572021" alpha="0.75800001621246338" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
