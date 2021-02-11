@@ -47,9 +47,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="q5S-EY-gye">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-Qb-llz">
                                 <rect key="frame" x="45" y="220.5" width="324" height="675.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,19 +82,15 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundView"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="q5S-EY-gye" secondAttribute="trailing" id="1V3-NF-mzN"/>
                             <constraint firstItem="9yP-Qb-llz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="7IZ-xo-q1G"/>
                             <constraint firstItem="9yP-Qb-llz" firstAttribute="top" secondItem="363-Mp-9EF" secondAttribute="bottom" constant="20" id="7Lq-tN-own"/>
                             <constraint firstItem="363-Mp-9EF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CaJ-DR-nSh"/>
                             <constraint firstAttribute="bottomMargin" secondItem="9yP-Qb-llz" secondAttribute="bottom" constant="-34" id="Egp-51-4a7"/>
                             <constraint firstItem="9yP-Qb-llz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="i4O-iR-r8F"/>
-                            <constraint firstItem="q5S-EY-gye" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jWk-FI-kLf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9yP-Qb-llz" secondAttribute="trailing" constant="45" id="jiE-eU-pNY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="363-Mp-9EF" secondAttribute="trailing" constant="30" id="mjh-Ss-xQ6"/>
-                            <constraint firstItem="q5S-EY-gye" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rI9-7R-Tj3"/>
-                            <constraint firstAttribute="bottom" secondItem="q5S-EY-gye" secondAttribute="bottom" id="tGc-dp-kMu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Boxes" id="nB6-lV-G4o">
@@ -136,7 +129,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="uPe-nN-fWv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPe-nN-fWv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -157,7 +150,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="USH-lQ-lPA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundView"/>
                         <constraints>
                             <constraint firstItem="USH-lQ-lPA" firstAttribute="trailing" secondItem="fUv-uw-XLd" secondAttribute="trailing" id="359-Gx-xdh"/>
                             <constraint firstItem="USH-lQ-lPA" firstAttribute="bottom" secondItem="fUv-uw-XLd" secondAttribute="bottom" constant="-34" id="7od-FR-Toh"/>
@@ -355,7 +348,6 @@
     </scenes>
     <resources>
         <image name="Icon" width="520.5" height="520.5"/>
-        <image name="backgroundImage" width="768" height="768"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="backgroundBox">
