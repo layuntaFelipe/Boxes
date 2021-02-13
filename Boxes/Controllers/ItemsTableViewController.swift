@@ -65,20 +65,29 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, handler) in
+            // edit vc code
+            print("edit \(indexPath.row)")
+            handler(true)
+        }
+        let swipe = UISwipeActionsConfiguration(actions: [edit])
+        return swipe
     }
     
-    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
             tableView.beginUpdates()
             
-            deleteItem(item: itemArray[indexPath.row])
-            itemArray.remove(at: indexPath.row)
+            self.deleteItem(item: self.itemArray[indexPath.row])
+            self.itemArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             tableView.endUpdates()
+            handler(true)
         }
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        return swipe
     }
     
     //MARK: - TableView Delegate Methods
