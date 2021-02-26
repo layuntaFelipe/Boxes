@@ -58,57 +58,29 @@ class BoxesViewController: UIViewController {
 
     //MARK: - Buttons Models
     
+    let alertService = AlertService()
+    
     //Add Button - To create New Boxes
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
-        var nameTextField = UITextField()
-        var iconTextField = UITextField()
-
-        let alert = UIAlertController(title: "Add New Box", message: "", preferredStyle: .alert)
-
-        let action = UIAlertAction(title: "Add Box", style: .default) { (action) in
-            
-            if nameTextField.text == nil || nameTextField.text == "" {
-                Alert.alertNoTitle(on: self, with: "What? No Title?", message: "How would you put something on nothing?... Serious man, get help... ;)")
-            } else {
-                self.createBox(name: nameTextField.text!, icon: iconTextField.text ?? "")
-            }
-        }
-        let cancel = UIAlertAction(title: "cancel", style: .destructive, handler: nil)
-
-        alert.addTextField { (textField) in
-            textField.placeholder = "Icon"
-            iconTextField = textField 
-        }
-
-        alert.addTextField { (textField) in
-            textField.placeholder = "Title"
-            nameTextField = textField
-        }
-
-        alert.addAction(cancel)
-        alert.addAction(action)
-
-        present(alert, animated: true, completion: nil)
+        let customAlertVC = alertService.alert()
+        present(customAlertVC, animated: true)
     }
     
-    let alertService = AlertService()
     // TrashCan Button - To delete Boxes
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-//        print("Edit button clicked")
-//
-//        isToDelete.toggle()
-//        collectionView?.reloadData()
-//
-//        if isToDelete {
-//            sender.image = UIImage.init(systemName: "trash.fill")
-//            self.navItems.title = "Editing Mode"
-//        } else {
-//            sender.image = UIImage.init(systemName: "trash")
-//            self.navItems.title = "Boxes"
-//        }
-        let alertVC = alertService.alert()
-        present(alertVC, animated: true)
+        print("Edit button clicked")
+
+        isToDelete.toggle()
+        collectionView?.reloadData()
+
+        if isToDelete {
+            sender.image = UIImage.init(systemName: "trash.fill")
+            self.navItems.title = "Editing Mode"
+        } else {
+            sender.image = UIImage.init(systemName: "trash")
+            self.navItems.title = "Boxes"
+        }
     }
     
     @IBAction func unwindToBox(_ sender: UIStoryboardSegue) {}

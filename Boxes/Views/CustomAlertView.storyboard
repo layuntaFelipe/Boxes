@@ -21,18 +21,10 @@
                                 <rect key="frame" x="87" y="250" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bki-HM-kgV">
-                                        <rect key="frame" x="131" y="202" width="101" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Add Box"/>
-                                        <connections>
-                                            <action selector="addButtonPressed:" destination="3IR-uY-iid" eventType="touchUpInside" id="DxW-YR-JnU"/>
-                                            <segue destination="bGM-Eb-QZC" kind="unwind" unwindAction="unwindToBox:" id="PWQ-Od-EEB"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRt-7y-Ves">
-                                        <rect key="frame" x="8" y="202" width="97" height="30"/>
+                                        <rect key="frame" x="0.0" y="199" width="120" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
@@ -49,26 +41,43 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3s-To-oSA">
-                                        <rect key="frame" x="8" y="150" width="224" height="34"/>
+                                        <rect key="frame" x="8" y="144" width="224" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a Box" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ff-CL-xK1">
-                                        <rect key="frame" x="72" y="8" width="97" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🙃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bus-OK-ziF">
-                                        <rect key="frame" x="103" y="55" width="35" height="37"/>
+                                        <rect key="frame" x="103" y="63" width="35" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVP-W1-XXd">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a Box" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ff-CL-xK1">
+                                                <rect key="frame" x="71" y="13" width="97" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bki-HM-kgV">
+                                        <rect key="frame" x="120" y="199" width="120" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <state key="normal" title="Add Box"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="3IR-uY-iid" eventType="touchUpInside" id="DxW-YR-JnU"/>
+                                            <segue destination="bGM-Eb-QZC" kind="unwind" unwindAction="unwindToBox:" id="PWQ-Od-EEB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             </view>
@@ -77,9 +86,12 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.42615582191780821" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="addboxButtonView" destination="bki-HM-kgV" id="ljE-Kc-HVa"/>
                         <outlet property="boxView" destination="BSc-se-jV4" id="hVL-ge-1Gf"/>
+                        <outlet property="cancelButtonView" destination="zRt-7y-Ves" id="rdB-vf-V8f"/>
                         <outlet property="iconLabel" destination="bus-OK-ziF" id="Mod-Cy-Z0x"/>
                         <outlet property="nameTextView" destination="T3s-To-oSA" id="daz-M1-0cK"/>
+                        <outlet property="rectangleView" destination="dVP-W1-XXd" id="j6e-Ds-4Uj"/>
                         <outlet property="textView" destination="brq-OV-GQj" id="pxz-DY-10m"/>
                     </connections>
                 </viewController>
