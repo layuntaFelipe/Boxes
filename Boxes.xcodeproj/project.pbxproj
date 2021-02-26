@@ -23,6 +23,8 @@
 		27583CBF25C88E8F00FE314D /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27583CBD25C88E8F00FE314D /* MyCollectionViewCell.xib */; };
 		275A2AC125CDA88A0042CFC1 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */; };
 		275A2AC225CDA88A0042CFC1 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275A2AC025CDA88A0042CFC1 /* MyTableViewCell.xib */; };
+		27813AC725E895400066CB32 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27813AC625E895400066CB32 /* CustomAlertViewController.swift */; };
+		27813ACA25E895600066CB32 /* CustomAlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27813AC925E895600066CB32 /* CustomAlertView.storyboard */; };
 		27E3459E25CC7A5C009696B1 /* AlertModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3459D25CC7A5C009696B1 /* AlertModels.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		27583CBD25C88E8F00FE314D /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		275A2AC025CDA88A0042CFC1 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		27813AC625E895400066CB32 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		27813AC925E895600066CB32 /* CustomAlertView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomAlertView.storyboard; sourceTree = "<group>"; };
 		27E3459D25CC7A5C009696B1 /* AlertModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +98,7 @@
 			children = (
 				27403EAC25D30D8D00A779FD /* AnimationViewController.swift */,
 				27583C9825C887A100FE314D /* BoxesViewController.swift */,
+				27813AC625E895400066CB32 /* CustomAlertViewController.swift */,
 				27583CB625C88DF200FE314D /* ItemsTableViewController.swift */,
 				271A941725C8FA0400263981 /* CreateItemViewController.swift */,
 			);
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				275A2AC025CDA88A0042CFC1 /* MyTableViewCell.xib */,
+				27813AC925E895600066CB32 /* CustomAlertView.storyboard */,
 				27583CA225C887A200FE314D /* LaunchScreen.storyboard */,
 				27583CBD25C88E8F00FE314D /* MyCollectionViewCell.xib */,
 				27583C9A25C887A100FE314D /* Main.storyboard */,
@@ -186,6 +192,7 @@
 				27583CA125C887A200FE314D /* Assets.xcassets in Resources */,
 				27583CBF25C88E8F00FE314D /* MyCollectionViewCell.xib in Resources */,
 				27583C9C25C887A100FE314D /* Main.storyboard in Resources */,
+				27813ACA25E895600066CB32 /* CustomAlertView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +210,7 @@
 				275A2AC125CDA88A0042CFC1 /* MyTableViewCell.swift in Sources */,
 				27403EB525D333A300A779FD /* GradientAndColors.swift in Sources */,
 				271A941825C8FA0400263981 /* CreateItemViewController.swift in Sources */,
+				27813AC725E895400066CB32 /* CustomAlertViewController.swift in Sources */,
 				27583CBA25C88E5100FE314D /* Quotes.swift in Sources */,
 				27583CB725C88DF200FE314D /* ItemsTableViewController.swift in Sources */,
 				27583C9725C887A100FE314D /* SceneDelegate.swift in Sources */,

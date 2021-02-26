@@ -71,14 +71,14 @@ class BoxesViewController: UIViewController {
             if nameTextField.text == nil || nameTextField.text == "" {
                 Alert.alertNoTitle(on: self, with: "What? No Title?", message: "How would you put something on nothing?... Serious man, get help... ;)")
             } else {
-                self.createBox(name: nameTextField.text!, icon: iconTextField.text!)
+                self.createBox(name: nameTextField.text!, icon: iconTextField.text ?? "")
             }
         }
         let cancel = UIAlertAction(title: "cancel", style: .destructive, handler: nil)
 
         alert.addTextField { (textField) in
             textField.placeholder = "Icon"
-            iconTextField = textField
+            iconTextField = textField 
         }
 
         alert.addTextField { (textField) in
@@ -92,21 +92,26 @@ class BoxesViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    let alertService = AlertService()
     // TrashCan Button - To delete Boxes
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-        print("Edit button clicked")
-        
-        isToDelete.toggle()
-        collectionView?.reloadData()
-        
-        if isToDelete {
-            sender.image = UIImage.init(systemName: "trash.fill")
-            self.navItems.title = "Editing Mode"
-        } else {
-            sender.image = UIImage.init(systemName: "trash")
-            self.navItems.title = "Boxes"
-        }
+//        print("Edit button clicked")
+//
+//        isToDelete.toggle()
+//        collectionView?.reloadData()
+//
+//        if isToDelete {
+//            sender.image = UIImage.init(systemName: "trash.fill")
+//            self.navItems.title = "Editing Mode"
+//        } else {
+//            sender.image = UIImage.init(systemName: "trash")
+//            self.navItems.title = "Boxes"
+//        }
+        let alertVC = alertService.alert()
+        present(alertVC, animated: true)
     }
+    
+    @IBAction func unwindToBox(_ sender: UIStoryboardSegue) {}
     
     //MARK: - CoreDate Manupulation Methods
     
@@ -238,3 +243,50 @@ extension BoxesViewController: UICollectionViewDataSource {
         
     }
 }
+
+class EmojiTextField: UITextField {
+
+       // required for iOS 13
+       override var textInputContextIdentifier: String? { "" } // return non-nil to show the Emoji keyboard ¯\_(ツ)_/¯
+
+        override var textInputMode: UITextInputMode? {
+            for mode in UITextInputMode.activeInputModes {
+                if mode.primaryLanguage == "emoji" {
+                    return mode
+                }
+            }
+            return nil
+        }
+
+    override init(frame: CGRect) {
+            super.init(frame: frame)
+
+            commonInit()
+        }
+
+        required init?(coder: NSCoder) {
+            super.init(coder: coder)
+
+             commonInit()
+        }
+
+        func commonInit() {
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(inputModeDidChange),
+                                                   name: UITextInputMode.currentInputModeDidChangeNotification,
+                                                   object: nil)
+        }
+
+        @objc func inputModeDidChange(_ notification: Notification) {
+            guard isFirstResponder else {
+                return
+            }
+
+            DispatchQueue.main.async { [weak self] in
+                self?.reloadInputViews()
+            }
+        }
+    
+    
+    
+    }

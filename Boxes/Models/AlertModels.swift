@@ -17,3 +17,16 @@ class Alert {
     }
     
 }
+
+class AlertService {
+    
+    func alert() -> CustomAlertViewController {
+        
+        let storyboard = UIStoryboard(name: "CustomAlertView", bundle: .main)
+        
+        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertVC") as! CustomAlertViewController
+        
+        return alertVC
+    }
+    
+}
