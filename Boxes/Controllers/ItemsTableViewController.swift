@@ -176,5 +176,11 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func unwindToItems(_ sender: UIStoryboardSegue) {}
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! CreateItemViewController
+        destVC.view.backgroundColor = self.view.backgroundColor
+    }
 
 }

@@ -19,6 +19,17 @@ class CustomAlertViewController: UIViewController {
     @IBOutlet weak var addboxButtonView: UIButton!
     @IBOutlet weak var rectangleView: UIView!
     
+    var color = C()
+    var boxColor = String()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        boxColor = color.randomColor()
+        boxView?.layer.borderColor = UIColor(named: boxColor)?.cgColor
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,15 +37,15 @@ class CustomAlertViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
         boxView?.layer.cornerRadius = 10
-        boxView?.layer.borderWidth = 1
+        boxView?.layer.borderWidth = 3
         boxView?.layer.borderColor = UIColor.gray.cgColor
         
         rectangleView.layer.cornerRadius = 10
         
-        cancelButtonView.layer.borderWidth = 1
+        cancelButtonView.layer.borderWidth = 0.5
         cancelButtonView.layer.borderColor = UIColor.gray.cgColor
         
-        addboxButtonView.layer.borderWidth = 1
+        addboxButtonView.layer.borderWidth = 0.5
         addboxButtonView.layer.borderColor = UIColor.gray.cgColor
         
         textView.delegate = self
@@ -57,7 +68,7 @@ class CustomAlertViewController: UIViewController {
         if nameTextView.text == nil || nameTextView.text == "" {
         } else {
             let destVC = segue.destination as! BoxesViewController
-            destVC.createBox(name: nameTextView.text!, icon: textView.text ?? "")
+            destVC.createBox(name: nameTextView.text!, icon: textView.text ?? "", color: boxColor)
         }
     }
     

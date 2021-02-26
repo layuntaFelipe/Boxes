@@ -23,7 +23,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         numberView.text = numberTitle
         
         backgroundCellView.layer.cornerRadius = 10
-        backgroundCellView.layer.borderWidth = 1
+        backgroundCellView.layer.borderWidth = 3
         backgroundCellView.layer.borderColor = UIColor.gray.cgColor
         
         circleView.layer.cornerRadius = circleView.bounds.size.height/2

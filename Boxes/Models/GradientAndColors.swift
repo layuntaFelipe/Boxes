@@ -24,7 +24,10 @@ extension UIView {
     
 }
 
-struct Colors {
-    static let topColor = UIColor(named: "gradientColor1")
-    static let buttomColor = UIColor(named: "gradientColor2")
+class C {
+    let colors = ["blue", "coral", "green", "red", "orange", "sky", "esmeralda", "purple", "yellow"]
+    
+    func randomColor() -> String {
+        return colors.randomElement()!
+    }
 }

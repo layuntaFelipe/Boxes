@@ -97,11 +97,12 @@ class BoxesViewController: UIViewController {
     }
     
     // Func Write to CoreData a BoxItem, append to the boxArray the new Box
-    func createBox(name: String, icon: String) {
+    func createBox(name: String, icon: String, color: String) {
         let newBox = BoxItems(context: context)
         newBox.name = name
         newBox.icon = icon
         newBox.number = 0
+        newBox.color = color
         boxArray.append(newBox)
         self.collectionView?.reloadData()
         
@@ -150,6 +151,7 @@ extension BoxesViewController: UICollectionViewDelegate {
             
             boxNumber = indexPath.row
             print("boxNumber is: \(boxNumber)")
+            print("boxColor is: \(boxArray[boxNumber].color!)")
             
             performSegue(withIdentifier: "CategoryToItem", sender: self)
         } else {
@@ -176,6 +178,7 @@ extension BoxesViewController: UICollectionViewDelegate {
             let destinationVC = segue.destination as! ItemsTableViewController
             destinationVC.navItem!.title = "\(titleNavigation) Items"
             destinationVC.selectedCategory = boxArray[boxNumber]
+            destinationVC.view.backgroundColor = UIColor(named: boxArray[boxNumber].color!)
         }
     }
     
@@ -204,6 +207,7 @@ extension BoxesViewController: UICollectionViewDataSource {
         cell.titleView?.text = box.name
         cell.iconView?.text = box.icon
         cell.numberView.text = String(box.number)
+        cell.backgroundCellView.layer.borderColor = UIColor(named: box.color!)?.cgColor
         
         if isToDelete {
             cell.numberView.text = "-"
@@ -215,50 +219,3 @@ extension BoxesViewController: UICollectionViewDataSource {
         
     }
 }
-
-class EmojiTextField: UITextField {
-
-       // required for iOS 13
-       override var textInputContextIdentifier: String? { "" } // return non-nil to show the Emoji keyboard ¯\_(ツ)_/¯
-
-        override var textInputMode: UITextInputMode? {
-            for mode in UITextInputMode.activeInputModes {
-                if mode.primaryLanguage == "emoji" {
-                    return mode
-                }
-            }
-            return nil
-        }
-
-    override init(frame: CGRect) {
-            super.init(frame: frame)
-
-            commonInit()
-        }
-
-        required init?(coder: NSCoder) {
-            super.init(coder: coder)
-
-             commonInit()
-        }
-
-        func commonInit() {
-            NotificationCenter.default.addObserver(self,
-                                                   selector: #selector(inputModeDidChange),
-                                                   name: UITextInputMode.currentInputModeDidChangeNotification,
-                                                   object: nil)
-        }
-
-        @objc func inputModeDidChange(_ notification: Notification) {
-            guard isFirstResponder else {
-                return
-            }
-
-            DispatchQueue.main.async { [weak self] in
-                self?.reloadInputViews()
-            }
-        }
-    
-    
-    
-    }
