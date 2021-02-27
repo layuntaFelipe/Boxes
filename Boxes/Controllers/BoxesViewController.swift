@@ -91,6 +91,7 @@ class BoxesViewController: UIViewController {
     func getAllBoxes(with request: NSFetchRequest<BoxItems> = BoxItems.fetchRequest()) {
         do {
             boxArray = try context.fetch(request)
+            boxArray.sort(by: {$0.date! < $1.date!})
         } catch {
             print("Error fetching allBoxes : \(error)")
         }
@@ -103,6 +104,7 @@ class BoxesViewController: UIViewController {
         newBox.icon = icon
         newBox.number = 0
         newBox.color = color
+        newBox.date = Date()
         boxArray.append(newBox)
         self.collectionView?.reloadData()
         
