@@ -1,0 +1,16 @@
+PODS:
+  - ISEmojiView (0.2.6)
+
+DEPENDENCIES:
+  - ISEmojiView
+
+SPEC REPOS:
+  trunk:
+    - ISEmojiView
+
+SPEC CHECKSUMS:
+  ISEmojiView: f7cd94a6c93307f429ec5da001293d0b02247f03
+
+PODFILE CHECKSUM: 96a479b3a5416f4a79d6127d6fbb336a1f83af0e
+
+COCOAPODS: 1.10.1

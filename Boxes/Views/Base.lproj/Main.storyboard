@@ -20,19 +20,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="C59-yv-Agd">
-                                <rect key="frame" x="121" y="393.5" width="172" height="109"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="C59-yv-Agd">
+                                <rect key="frame" x="142" y="383" width="130" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="9mY-M3-6R5"/>
-                                    <constraint firstAttribute="width" constant="172" id="YHl-bS-Y7w"/>
+                                    <constraint firstAttribute="height" constant="130" id="9mY-M3-6R5"/>
+                                    <constraint firstAttribute="width" constant="130" id="YHl-bS-Y7w"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y7P-dc-b5I"/>
-                        <color key="backgroundColor" name="backgroundView"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="C59-yv-Agd" firstAttribute="centerX" secondItem="qU3-x0-it9" secondAttribute="centerX" id="cjL-cc-FuA"/>
-                            <constraint firstItem="C59-yv-Agd" firstAttribute="centerY" secondItem="qU3-x0-it9" secondAttribute="centerY" id="p1X-8r-LM3"/>
+                            <constraint firstItem="C59-yv-Agd" firstAttribute="centerX" secondItem="qU3-x0-it9" secondAttribute="centerX" id="L9U-fA-S0M"/>
+                            <constraint firstItem="C59-yv-Agd" firstAttribute="centerY" secondItem="qU3-x0-it9" secondAttribute="centerY" id="OPf-04-nJ7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Cy-y6-Crm"/>
@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfI-tf-b0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="98"/>
+            <point key="canvasLocation" x="-388.40579710144931" y="97.767857142857139"/>
         </scene>
         <!--Boxes-->
         <scene sceneID="tne-QT-ifu">
@@ -405,8 +405,9 @@
             <point key="canvasLocation" x="-1281" y="98"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="buttonColor"/>
     <resources>
-        <image name="Icon" width="520.5" height="520.5"/>
+        <image name="Icon" width="170.5" height="170.5"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="AccentColor">
@@ -414,9 +415,6 @@
         </namedColor>
         <namedColor name="backgroundBox">
             <color red="0.78200000524520874" green="0.77700001001358032" blue="0.78600001335144043" alpha="0.38299998641014099" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="backgroundView">
-            <color red="0.99400001764297485" green="0.98799997568130493" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

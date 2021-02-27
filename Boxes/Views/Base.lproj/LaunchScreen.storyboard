@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,25 +40,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fv4-9X-od9">
-                                <rect key="frame" x="121" y="393.5" width="172" height="109"/>
-                                <color key="tintColor" name="buttonColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Wwm-Aq-o26">
+                                <rect key="frame" x="142" y="383" width="130" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="XvF-y4-hO4"/>
-                                    <constraint firstAttribute="height" constant="109" id="tcm-fe-GUG"/>
+                                    <constraint firstAttribute="width" constant="130" id="DQB-d1-u94"/>
+                                    <constraint firstAttribute="height" constant="130" id="zGD-VD-C2m"/>
                                 </constraints>
-                                <imageReference key="image" image="Icon" symbolScale="large"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="backgroundView"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KZu-bl-vf6" firstAttribute="top" secondItem="Fv4-9X-od9" secondAttribute="bottom" constant="10" id="O5Y-bB-zxp"/>
-                            <constraint firstItem="Fv4-9X-od9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Pgf-bp-IKn"/>
                             <constraint firstItem="KZu-bl-vf6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S1I-mx-2g8"/>
+                            <constraint firstItem="Wwm-Aq-o26" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WXa-bD-e4q"/>
                             <constraint firstItem="4FD-rF-beI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XXl-wW-xNC"/>
-                            <constraint firstItem="Fv4-9X-od9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Yvu-Rs-znf"/>
-                            <constraint firstItem="Fv4-9X-od9" firstAttribute="top" secondItem="4FD-rF-beI" secondAttribute="bottom" constant="10" id="uEh-M4-5Mc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KZu-bl-vf6" secondAttribute="bottom" constant="339.5" id="bur-ox-BUS"/>
+                            <constraint firstItem="Wwm-Aq-o26" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eJr-Hq-gj0"/>
+                            <constraint firstItem="4FD-rF-beI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="329.5" id="pJp-Db-ACb"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -68,12 +66,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon" width="520.5" height="520.5"/>
-        <namedColor name="backgroundView">
-            <color red="0.99400001764297485" green="0.98799997568130493" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
+        <image name="Icon" width="170.5" height="170.5"/>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
