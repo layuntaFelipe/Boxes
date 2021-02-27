@@ -14,8 +14,11 @@ class CreateItemViewController: UIViewController {
     @IBOutlet weak var datePickerView: UIDatePicker!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var switchButtonView: UISwitch!
     
     var localArray = [String]()
+    
+    var itemSelected = ToDoItems()
     
     var endDate = Date()
     
@@ -86,8 +89,8 @@ class CreateItemViewController: UIViewController {
                 destVC.namesArray = localArray
                 destVC.createItem(title: localArray[0], text: localArray[1], deadLine: deadLine, endDate: endDate)
             } else {
-//                let destVC = segue.destination as! ItemsTableViewController
-//                destVC.update
+                let destVC = segue.destination as! ItemsTableViewController
+                destVC.updateItem(item: itemSelected, newTitle: localArray[0], newText: localArray[1], hasDeadLine: deadLine, newDate: endDate)
             }
         }
     }

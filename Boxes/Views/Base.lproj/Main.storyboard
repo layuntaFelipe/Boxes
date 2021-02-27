@@ -369,6 +369,7 @@
                     <connections>
                         <outlet property="datePickerView" destination="WW3-H4-GOW" id="t2Y-52-MeC"/>
                         <outlet property="newItemView" destination="l5Y-FF-g51" id="thH-rj-7lQ"/>
+                        <outlet property="switchButtonView" destination="EfR-Yg-FGh" id="whU-OP-Yma"/>
                         <outlet property="textView" destination="ilY-hz-hOA" id="CqM-0V-BSA"/>
                         <outlet property="titleTextField" destination="Obu-Jj-Zai" id="tQN-NO-RZx"/>
                     </connections>

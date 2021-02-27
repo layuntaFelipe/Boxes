@@ -15,6 +15,10 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var itemArray = [ToDoItems]()
     
+    var itemNumber = Int()
+    
+    var editMode = false
+    
     var namesArray = [String]()
     
     var selectedCategory: BoxItems? {
@@ -69,6 +73,9 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, handler) in
             // edit vc code
             print("edit \(indexPath.row)")
+            self.itemNumber = indexPath.row
+            self.editMode = true
+            self.performSegue(withIdentifier: "createNewItem", sender: self)
             handler(true)
         }
         let swipe = UISwipeActionsConfiguration(actions: [edit])
@@ -95,7 +102,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!)")
+        print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and endDate: \(itemArray[indexPath.row].date)")
         
         itemArray[indexPath.row].done.toggle()
         
@@ -160,9 +167,14 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func updateItem(item: ToDoItems, newTitle: String, newText: String) {
+    func updateItem(item: ToDoItems, newTitle: String, newText: String, hasDeadLine: Bool, newDate: Date) {
         item.title = newTitle
         item.text = newText
+        item.hasDeadLine = hasDeadLine
+        if item.hasDeadLine {
+            item.date = newDate
+        }
+        self.tableView?.reloadData()
         do {
             try context.save()
         } catch {
@@ -172,6 +184,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //MARK: - Add New Item
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        editMode = false
         performSegue(withIdentifier: "createNewItem", sender: self)
     }
     
@@ -181,6 +194,19 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! CreateItemViewController
         destVC.view.backgroundColor = self.view.backgroundColor
+        if editMode {
+            destVC.isToCreate = false
+            destVC.itemSelected = itemArray[itemNumber]
+            destVC.titleTextField.text = itemArray[itemNumber].title
+            if itemArray[itemNumber].hasDeadLine {
+                //Problema na hora de mudar a data!!!!!
+                destVC.switchButtonView.isOn = true
+                destVC.datePickerView.isHidden = false
+                print(itemArray[itemNumber].date!)
+                destVC.datePickerView.date = itemArray[itemNumber].endDate!
+            }
+            destVC.textView.text = itemArray[itemNumber].text
+        }
     }
 
 }
