@@ -6,8 +6,31 @@
 //
 
 import UIKit
+import ISEmojiView
 
-class CustomAlertViewController: UIViewController {
+class CustomAlertViewController: UIViewController, EmojiViewDelegate {
+    
+    // callback when tap a emoji on keyboard
+    func emojiViewDidSelectEmoji(_ emoji: String, emojiView: EmojiView) {
+        textView.insertText(emoji)
+    }
+
+    // callback when tap change keyboard button on keyboard
+    func emojiViewDidPressChangeKeyboardButton(_ emojiView: EmojiView) {
+        textView.inputView = nil
+        textView.keyboardType = .default
+        textView.reloadInputViews()
+    }
+        
+    // callback when tap delete button on keyboard
+    func emojiViewDidPressDeleteBackwardButton(_ emojiView: EmojiView) {
+        textView.deleteBackward()
+    }
+
+    // callback when tap dismiss button on keyboard
+    func emojiViewDidPressDismissKeyboardButton(_ emojiView: EmojiView) {
+        textView.resignFirstResponder()
+    }
 
     @IBOutlet weak var boxView: UIView?
     
@@ -25,6 +48,7 @@ class CustomAlertViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        textView.becomeFirstResponder()
         boxColor = color.randomColor()
         boxView?.layer.borderColor = UIColor(named: boxColor)?.cgColor
         
@@ -32,6 +56,12 @@ class CustomAlertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let keyboardSettings = KeyboardSettings(bottomType: .categories)
+        let emojiView = EmojiView(keyboardSettings: keyboardSettings)
+        emojiView.translatesAutoresizingMaskIntoConstraints = false
+        emojiView.delegate = self
+        textView.inputView = emojiView
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
