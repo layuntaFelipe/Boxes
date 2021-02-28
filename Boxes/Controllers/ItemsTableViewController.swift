@@ -57,7 +57,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let item = itemArray[indexPath.row]
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd"
+        dateFormatter.dateFormat = "MM/dd-hh:mm"
         
         cell.backgroundColor = UIColor.clear
         cell.titleLabel.text = item.title
