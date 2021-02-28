@@ -7,11 +7,14 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var navItem: UINavigationItem?
     @IBOutlet var tableView: UITableView?
+    
+    let reminder = Reminders.init(center: UNUserNotificationCenter.current())
     
     var itemArray = [ToDoItems]()
     
@@ -32,6 +35,8 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        reminder.requestAuthorization()
         
         tableView?.delegate = self
         tableView?.dataSource = self
@@ -143,6 +148,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         newItem.hasDeadLine = deadLine
         if newItem.hasDeadLine {
             newItem.endDate = endDate
+            reminder.createReminder(title: title, text: text, date: endDate)
         }
         newItem.parentCategory = selectedCategory
         // The endDate is NOT changing as the DatePicker Changes!

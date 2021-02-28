@@ -302,10 +302,10 @@
                                     <constraint firstItem="EfR-Yg-FGh" firstAttribute="leading" secondItem="uqK-y2-K9g" secondAttribute="trailing" constant="214" id="uo2-XH-QDU"/>
                                 </constraints>
                             </view>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="WW3-H4-GOW">
-                                <rect key="frame" x="20" y="552" width="154" height="56"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="WW3-H4-GOW">
+                                <rect key="frame" x="20" y="552" width="350" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="154" id="5ez-MP-QK9"/>
+                                    <constraint firstAttribute="width" constant="350" id="5ez-MP-QK9"/>
                                     <constraint firstAttribute="height" constant="56" id="syX-BU-eti"/>
                                 </constraints>
                                 <connections>
