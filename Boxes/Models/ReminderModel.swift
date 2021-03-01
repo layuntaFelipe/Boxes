@@ -23,8 +23,9 @@ class Reminders {
     
     func createReminder(title: String, text: String, date: Date) {
         let content = UNMutableNotificationContent()
-        content.title = "Hi, I'm notification \(title)"
-        content.body = "My long \(text)"
+        content.title = "Hey did you do \(title) ?"
+        content.body = text
+        content.sound = .default
         
         print("Creating trigger")
         let date = date
