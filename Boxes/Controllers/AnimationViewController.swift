@@ -10,50 +10,38 @@ import UIKit
 class AnimationViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet weak var redball: UIImageView!
-    @IBOutlet weak var skyBall: UIImageView!
-    @IBOutlet weak var purpleBall: UIImageView!
-    @IBOutlet weak var darkgreenBall: UIImageView!
-    @IBOutlet weak var blueBall: UIImageView!
-    @IBOutlet weak var yellowBall: UIImageView!
-    @IBOutlet weak var orangeBall: UIImageView!
-    @IBOutlet weak var greenBall: UIImageView!
+    @IBOutlet weak var xView: UIView!
+    @IBOutlet weak var plusView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(imageView)
+        view.addSubview(xView)
+        view.addSubview(plusView)
         
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        imageView.center = view.center
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
-            self.animate()
-        })
+        animateRotation()
     }
     
-    private func animate() {
-        UIView.animate(withDuration: 1, animations: {
-            let size = self.view.frame.size.width * 3.3
-            let diffx = size - self.view.frame.size.width
-            let diffy = self.view.frame.size.height - size
-            
-            self.imageView.frame = CGRect(x: -(diffx/2),
-                                          y: diffy/2,
-                                          width: size,
-                                          height: size)
-        })
+    func animateRotation() {
+        let animation = CABasicAnimation()
+        animation.keyPath = "transform.rotation.z"
+        animation.fromValue = 0
+        animation.toValue = CGFloat.pi
+        animation.duration = 1
+
+        xView.layer.add(animation, forKey: "basic")
+        xView.layer.transform = CATransform3DMakeRotation(CGFloat.pi , 0, 0, 1)
+        plusView.layer.add(animation, forKey: "basic")
+        plusView.layer.transform = CATransform3DMakeRotation(CGFloat.pi , 0, 0, 1)
         
-        UIView.animate(withDuration: 1.5, animations: {
-            self.imageView.alpha = 0
-        }) { (done) in
-            if done {
-                DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
-                    self.performSegue(withIdentifier: "animationToBoxes", sender: self)
-                }
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            self.performSegue(withIdentifier: "animationToBoxes", sender: self)
         }
+
     }
+    
 }

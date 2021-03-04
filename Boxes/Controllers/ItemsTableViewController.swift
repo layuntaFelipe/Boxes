@@ -60,7 +60,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         dateFormatter.dateFormat = "MM/dd-hh:mm"
         
         cell.backgroundColor = UIColor.clear
-        cell.backgroundViewCell.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
+        cell.backgroundViewCell.backgroundColor = view.backgroundColor
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.text
         if item.hasDeadLine {
