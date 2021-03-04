@@ -96,7 +96,7 @@
 		21B7D1CE61BF316F082DD250E670C725 /* Pods-Boxes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Boxes-umbrella.h"; sourceTree = "<group>"; };
 		25FF3ABB3A75CAF6FA42FB57276C1582 /* Pods-Boxes-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Boxes-dummy.m"; sourceTree = "<group>"; };
 		295FAD63EC4544F24BC9B7D06D12480D /* ic_emojiDelete@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_emojiDelete@2x.png"; path = "Source/Assets/Images/ic_emojiDelete@2x.png"; sourceTree = "<group>"; };
-		29BEC65A4B92CC2BC545360F39188306 /* Pods_Boxes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Boxes.framework; path = "Pods-Boxes.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29BEC65A4B92CC2BC545360F39188306 /* Pods_Boxes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boxes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		316F4A592F5811C29B717ED2774E89F4 /* EmojiCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiCategory.swift; path = Source/Classes/Models/EmojiCategory.swift; sourceTree = "<group>"; };
 		320E0E81181F8A9D35A5F3D324A89FCE /* ic_flags@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_flags@2x.png"; path = "Source/Assets/Images/ic_flags@2x.png"; sourceTree = "<group>"; };
 		341CE4CF8398A9307A9DF9DCC7C285E5 /* ic_smileys_people@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_smileys_people@3x.png"; path = "Source/Assets/Images/ic_smileys_people@3x.png"; sourceTree = "<group>"; };
@@ -108,9 +108,9 @@
 		405A171B9300622AF10F52A92B11DF10 /* EmojiCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiCollectionView.swift; path = Source/Classes/Views/EmojiCollectionView/EmojiCollectionView.swift; sourceTree = "<group>"; };
 		43250BD6283059335AAC6A747AB3CE05 /* ic_objects@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_objects@3x.png"; path = "Source/Assets/Images/ic_objects@3x.png"; sourceTree = "<group>"; };
 		4DE229827B51BFD3041325B62328BA83 /* ISEmojiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ISEmojiView-Info.plist"; sourceTree = "<group>"; };
-		503DA7A0D388AA0DEE0FF08C7252618C /* ISEmojiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ISEmojiView.framework; path = ISEmojiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		503DA7A0D388AA0DEE0FF08C7252618C /* ISEmojiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISEmojiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54600AD8C7F93132F8D85E70370E45C7 /* ic_activity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ic_activity.png; path = Source/Assets/Images/ic_activity.png; sourceTree = "<group>"; };
-		54668CC0F82B84BC0E7E5859B6FB5364 /* Images */ = {isa = PBXFileReference; includeInIndex = 1; name = Images; path = Source/Assets/Images; sourceTree = "<group>"; };
+		54668CC0F82B84BC0E7E5859B6FB5364 /* Images */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Images; path = Source/Assets/Images; sourceTree = "<group>"; };
 		5599A05A0FE70247E748AC2D2ED00C6E /* ic_travel_places@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_travel_places@3x.png"; path = "Source/Assets/Images/ic_travel_places@3x.png"; sourceTree = "<group>"; };
 		587F9BA92C2644D9B55F89D9C54335BE /* ISEmojiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ISEmojiView-dummy.m"; sourceTree = "<group>"; };
 		5DABD77091ED47AC9675EC6FBA76A8FE /* Category.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Source/Classes/Models/Category.swift; sourceTree = "<group>"; };
@@ -139,10 +139,10 @@
 		89FE2147382D9CD028E7447B384AC6B5 /* Emoji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = Source/Classes/Models/Emoji.swift; sourceTree = "<group>"; };
 		8FC94189D928B0D2041E7005CB1EEECB /* ic_smileys_people@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_smileys_people@2x.png"; path = "Source/Assets/Images/ic_smileys_people@2x.png"; sourceTree = "<group>"; };
 		8FD26B7DA8DB054B3EF32FEB95E90C84 /* Pods-Boxes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Boxes.release.xcconfig"; sourceTree = "<group>"; };
-		95D1EB7A71149C55E3A9D433BDDA8C19 /* Views */ = {isa = PBXFileReference; includeInIndex = 1; name = Views; path = Source/Assets/Views; sourceTree = "<group>"; };
+		95D1EB7A71149C55E3A9D433BDDA8C19 /* Views */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Views; path = Source/Assets/Views; sourceTree = "<group>"; };
 		968E319C89531E9929A6FBC3D9E588F1 /* Pods-Boxes-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Boxes-Info.plist"; sourceTree = "<group>"; };
 		9A2AFB58F5010705242255A60BFEBFAC /* PageControlBottomView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PageControlBottomView.xib; path = Source/Assets/Views/PageControlBottomView.xib; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FB78D727C61723A3A67059B54C6B275 /* EmojiPopView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiPopView.swift; path = Source/Classes/Views/EmojiPopView/EmojiPopView.swift; sourceTree = "<group>"; };
 		A96469A82B450AB279FBC7CFE90A9555 /* ic_food_drink@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_food_drink@3x.png"; path = "Source/Assets/Images/ic_food_drink@3x.png"; sourceTree = "<group>"; };
 		B1C142F7FE8ABE4361E642AD782579FF /* ic_recents.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ic_recents.png; path = Source/Assets/Images/ic_recents.png; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		D5838A289274518A1ACABD6042D9E856 /* ic_smileys_people.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ic_smileys_people.png; path = Source/Assets/Images/ic_smileys_people.png; sourceTree = "<group>"; };
 		D6CBACBB01EBAA9C3747E44348AEB02C /* ic_food_drink.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ic_food_drink.png; path = Source/Assets/Images/ic_food_drink.png; sourceTree = "<group>"; };
 		DB989B0C595572FEC6E3895B5955231E /* KeyboardSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardSettings.swift; path = Source/Classes/Models/KeyboardSettings.swift; sourceTree = "<group>"; };
-		DBB02C34A28521860A3647146E937055 /* ISEmojiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ISEmojiView.bundle; path = "ISEmojiView-ISEmojiView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB02C34A28521860A3647146E937055 /* ISEmojiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISEmojiView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2203CA95AA3026DE78A9053F5F355E7 /* CategoriesBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CategoriesBottomView.swift; path = Source/Classes/Views/BottomViews/CategoriesBottomView/CategoriesBottomView.swift; sourceTree = "<group>"; };
 		E8045C9C0474CF81CB9D8D194EAC9398 /* Pods-Boxes-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Boxes-acknowledgements.plist"; sourceTree = "<group>"; };
 		E88AB96E83A7A56D30786D54F1629274 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Classes/Helpers/Constants.swift; sourceTree = "<group>"; };
@@ -232,7 +232,6 @@
 				4F81FD6177571C92E3C5B1362202C83B /* Resources */,
 				61AF5683D96ABFD5DB26640B3CDA60BD /* Support Files */,
 			);
-			name = ISEmojiView;
 			path = ISEmojiView;
 			sourceTree = "<group>";
 		};
@@ -434,7 +433,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -622,7 +621,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ISEmojiView";
 				IBSC_MODULE = ISEmojiView;
 				INFOPLIST_FILE = "Target Support Files/ISEmojiView/ResourceBundle-ISEmojiView-ISEmojiView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = ISEmojiView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -646,7 +645,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ISEmojiView/ISEmojiView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ISEmojiView/ISEmojiView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,7 +672,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ISEmojiView";
 				IBSC_MODULE = ISEmojiView;
 				INFOPLIST_FILE = "Target Support Files/ISEmojiView/ResourceBundle-ISEmojiView-ISEmojiView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = ISEmojiView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -734,7 +733,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ISEmojiView/ISEmojiView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ISEmojiView/ISEmojiView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

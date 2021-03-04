@@ -60,6 +60,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         dateFormatter.dateFormat = "MM/dd-hh:mm"
         
         cell.backgroundColor = UIColor.clear
+        cell.backgroundViewCell.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.text
         if item.hasDeadLine {
@@ -107,7 +108,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and endDate: \(itemArray[indexPath.row].date)")
+        print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and endDate: \(String(describing: itemArray[indexPath.row].date))")
         
         itemArray[indexPath.row].done.toggle()
         
@@ -152,7 +153,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         newItem.parentCategory = selectedCategory
         // The endDate is NOT changing as the DatePicker Changes!
-        print("The newItem endDate is: \(newItem.endDate)")
+        print("The newItem endDate is: \(newItem.endDate!)")
         print(newItem.title!)
         print(newItem.text!)
         itemArray.append(newItem)

@@ -10,6 +10,14 @@ import UIKit
 class AnimationViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var redball: UIImageView!
+    @IBOutlet weak var skyBall: UIImageView!
+    @IBOutlet weak var purpleBall: UIImageView!
+    @IBOutlet weak var darkgreenBall: UIImageView!
+    @IBOutlet weak var blueBall: UIImageView!
+    @IBOutlet weak var yellowBall: UIImageView!
+    @IBOutlet weak var orangeBall: UIImageView!
+    @IBOutlet weak var greenBall: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
