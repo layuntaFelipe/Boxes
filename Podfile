@@ -8,5 +8,6 @@ target 'Boxes' do
   # Pods for Boxes
 
 pod 'ISEmojiView'
+pod 'ChameleonFramework/Swift' , :git => 'https://github.com/wowansm/Chameleon.git' , :branch => 'swift5'
 
 end

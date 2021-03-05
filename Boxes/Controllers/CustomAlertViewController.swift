@@ -7,6 +7,7 @@
 
 import UIKit
 import ISEmojiView
+import ChameleonFramework
 
 class CustomAlertViewController: UIViewController, EmojiViewDelegate {
     
@@ -42,15 +43,13 @@ class CustomAlertViewController: UIViewController, EmojiViewDelegate {
     @IBOutlet weak var addboxButtonView: UIButton!
     @IBOutlet weak var rectangleView: UIView!
     
-    var color = C()
     var boxColor = String()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         textView.becomeFirstResponder()
-        boxColor = color.randomColor()
-        boxView?.layer.borderColor = UIColor(named: boxColor)?.cgColor
+        boxColor = UIColor.randomFlat().hexValue()
+        boxView?.layer.borderColor = UIColor(hexString: boxColor)?.cgColor
         
     }
     

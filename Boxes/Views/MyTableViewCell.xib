@@ -20,16 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COP-mg-QTg">
-                        <rect key="frame" x="1" y="4" width="365" height="57"/>
+                        <rect key="frame" x="0.0" y="0.0" width="367" height="65"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="99F-ow-lNF">
-                                <rect key="frame" x="8" y="10.5" width="36" height="35"/>
+                                <rect key="frame" x="8" y="10.5" width="36" height="43"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYl-cc-eYR">
-                                <rect key="frame" x="281" y="0.0" width="84" height="25"/>
+                                <rect key="frame" x="283" y="0.0" width="84" height="33"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/04" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhw-L3-AIi">
-                                        <rect key="frame" x="0.0" y="0.0" width="84" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -44,13 +44,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-g1-9GC">
-                                <rect key="frame" x="52" y="4" width="226" height="21"/>
+                                <rect key="frame" x="52" y="4" width="228" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desciption jawdahjwda jwaijdnija wndjnawid jaw ijdanwij dai jdna idai jdn\" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a6z-nM-6Dq">
-                                <rect key="frame" x="52" y="26" width="309" height="27"/>
+                                <rect key="frame" x="52" y="34" width="311" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -81,10 +81,10 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <color key="tintColor" name="buttonColor"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="COP-mg-QTg" secondAttribute="trailing" constant="1" id="0Fl-AZ-aed"/>
-                    <constraint firstItem="COP-mg-QTg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="Fti-UI-pkx"/>
-                    <constraint firstAttribute="bottom" secondItem="COP-mg-QTg" secondAttribute="bottom" constant="4" id="Gr5-nx-WTF"/>
-                    <constraint firstItem="COP-mg-QTg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="fXg-c4-Lxz"/>
+                    <constraint firstAttribute="trailing" secondItem="COP-mg-QTg" secondAttribute="trailing" id="0Fl-AZ-aed"/>
+                    <constraint firstItem="COP-mg-QTg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fti-UI-pkx"/>
+                    <constraint firstAttribute="bottom" secondItem="COP-mg-QTg" secondAttribute="bottom" id="Gr5-nx-WTF"/>
+                    <constraint firstItem="COP-mg-QTg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fXg-c4-Lxz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

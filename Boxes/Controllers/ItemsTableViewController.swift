@@ -41,7 +41,20 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.register(MyTableViewCell.nib(), forCellReuseIdentifier: "MyTableViewCell")
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
+        longPressGesture.minimumPressDuration = 0.5
+        tableView?.addGestureRecognizer(longPressGesture)
 
+    }
+    
+    @objc func handleLongPress(longPressGesture: UILongPressGestureRecognizer) {
+        let p = longPressGesture.location(in: self.tableView)
+        let indexPath = self.tableView?.indexPathForRow(at: p)
+        if indexPath == nil {
+            print("Long press on table view, not row.")
+        } else if longPressGesture.state == UIGestureRecognizer.State.began {
+            print("Long press on row, at \(indexPath!.row)")
+        }
     }
 
     //MARK: - Tableview Datasource Methods
@@ -60,7 +73,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         dateFormatter.dateFormat = "MM/dd-hh:mm"
         
         cell.backgroundColor = UIColor.clear
-        cell.backgroundViewCell.backgroundColor = view.backgroundColor
+        cell.backgroundViewCell.backgroundColor = view.backgroundColor?.darken(byPercentage: 0.05 * CGFloat(indexPath.row))
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.text
         if item.hasDeadLine {
@@ -87,15 +100,16 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let swipe = UISwipeActionsConfiguration(actions: [edit])
         return swipe
     }
-    
+
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
             tableView.beginUpdates()
-            
+
             self.deleteItem(item: self.itemArray[indexPath.row])
             self.itemArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
+            tableView.reloadData()
+
             tableView.endUpdates()
             handler(true)
         }
@@ -153,7 +167,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         newItem.parentCategory = selectedCategory
         // The endDate is NOT changing as the DatePicker Changes!
-        print("The newItem endDate is: \(newItem.endDate!)")
+        print("The newItem endDate is: \(newItem.endDate)")
         print(newItem.title!)
         print(newItem.text!)
         itemArray.append(newItem)

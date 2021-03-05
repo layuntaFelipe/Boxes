@@ -23,11 +23,3 @@ extension UIView {
     }
     
 }
-
-class C {
-    let colors = ["blue", "coral", "green", "red", "orange", "sky", "esmeralda", "purple", "yellow"]
-    
-    func randomColor() -> String {
-        return colors.randomElement()!
-    }
-}

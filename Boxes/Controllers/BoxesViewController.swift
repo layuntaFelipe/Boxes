@@ -180,7 +180,7 @@ extension BoxesViewController: UICollectionViewDelegate {
             let destinationVC = segue.destination as! ItemsTableViewController
             destinationVC.navItem!.title = "\(titleNavigation) Items"
             destinationVC.selectedCategory = boxArray[boxNumber]
-            destinationVC.view.backgroundColor = UIColor(named: boxArray[boxNumber].color!)
+            destinationVC.view.backgroundColor = UIColor(hexString: boxArray[boxNumber].color!)
         }
     }
     
@@ -209,7 +209,7 @@ extension BoxesViewController: UICollectionViewDataSource {
         cell.titleView?.text = box.name
         cell.iconView?.text = box.icon
         cell.numberView.text = String(box.number)
-        cell.backgroundCellView.layer.borderColor = UIColor(named: box.color!)?.cgColor
+        cell.backgroundCellView.layer.borderColor = UIColor(hexString: box.color!)?.cgColor
         
         if isToDelete {
             cell.numberView.text = "-"

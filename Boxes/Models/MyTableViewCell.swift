@@ -20,25 +20,13 @@ class MyTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        backgroundViewCell.layer.cornerRadius = 10
-        backgroundViewCell.layer.borderWidth = 1
-        backgroundViewCell.layer.borderColor = UIColor.gray.cgColor
-        
         if didSelectEndDate {
             redView.isHidden = false
         } else {
             redView.isHidden = true
         }
         redView.layer.cornerRadius = 10
-        
     }
-    
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0))
-//    }
     
     static func nib() -> UINib {
         return UINib(nibName: "MyTableViewCell", bundle: nil)
@@ -46,7 +34,6 @@ class MyTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         
     }
     
