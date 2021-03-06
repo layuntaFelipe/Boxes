@@ -33,5 +33,15 @@ class Reminders {
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
         let request = UNNotificationRequest(identifier: "\(date)", content: content, trigger: trigger)
         center.add(request, withCompletionHandler: nil)
+        print("Identifier: \(request.identifier)")
+    }
+    
+    func removeReminder(date: String) {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [date])
+        print("deleting...")
+    }
+    
+    func getId() {
+        
     }
 }

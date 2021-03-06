@@ -488,11 +488,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="I0M-ss-Fz4"/>
                     <connections>
+                        <outlet property="buttonView" destination="WYe-gg-3H3" id="GHZ-RK-KeE"/>
                         <outlet property="datePickerView" destination="WW3-H4-GOW" id="t2Y-52-MeC"/>
                         <outlet property="deadLineLabel" destination="uqK-y2-K9g" id="e6g-KD-S7O"/>
+                        <outlet property="descriptionLabel" destination="4vI-bv-1KW" id="3MH-Sk-cW4"/>
                         <outlet property="newItemView" destination="l5Y-FF-g51" id="thH-rj-7lQ"/>
                         <outlet property="switchButtonView" destination="EfR-Yg-FGh" id="whU-OP-Yma"/>
                         <outlet property="textView" destination="ilY-hz-hOA" id="CqM-0V-BSA"/>
+                        <outlet property="titleLabel" destination="er5-KW-65A" id="T99-RA-4Ga"/>
                         <outlet property="titleTextField" destination="Obu-Jj-Zai" id="tQN-NO-RZx"/>
                     </connections>
                 </viewController>

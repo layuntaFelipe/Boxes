@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+import ChameleonFramework
 
 class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -32,6 +33,13 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let titleColor = ContrastColorOf(view.backgroundColor!, returnFlat: true)
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+        navigationItem.rightBarButtonItem?.tintColor = titleColor
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,10 +83,14 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.backgroundColor = UIColor.clear
         cell.backgroundViewCell.backgroundColor = view.backgroundColor?.darken(byPercentage: 0.05 * CGFloat(indexPath.row))
         cell.titleLabel.text = item.title
+        cell.titleLabel.textColor = ContrastColorOf((view.backgroundColor?.darken(byPercentage: 0.05 * CGFloat(indexPath.row)))!, returnFlat: true)
+        cell.descriptionLabel.textColor = ContrastColorOf((view.backgroundColor?.darken(byPercentage: 0.05 * CGFloat(indexPath.row)))!, returnFlat: true)
         cell.descriptionLabel.text = item.text
+        cell.circleImageView.tintColor = ContrastColorOf((view.backgroundColor?.darken(byPercentage: 0.05 * CGFloat(indexPath.row)))!, returnFlat: true)
         if item.hasDeadLine {
             cell.redView.isHidden = false
             cell.endDateLabel.text = dateFormatter.string(from: item.endDate!)
+            cell.endDateLabel.textColor = ContrastColorOf((view.backgroundColor?.darken(byPercentage: 0.05 * CGFloat(indexPath.row)))!, returnFlat: true)
         } else {
             cell.redView.isHidden =  true
             //Search about Date Formating into a custom String
@@ -105,6 +117,10 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
             tableView.beginUpdates()
 
+            if self.itemArray[indexPath.row].hasDeadLine {
+                self.reminder.removeReminder(date: "\(self.itemArray[indexPath.row].endDate!)")
+                print("Deleting...")
+            }
             self.deleteItem(item: self.itemArray[indexPath.row])
             self.itemArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -124,10 +140,16 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and endDate: \(String(describing: itemArray[indexPath.row].date))")
         
+        print("Does it has DeadLine: \(itemArray[indexPath.row].hasDeadLine)")
+        
         itemArray[indexPath.row].done.toggle()
         
         if itemArray[indexPath.row].done == true {
             print("YEEE IT's DONE")
+            if self.itemArray[indexPath.row].hasDeadLine {
+                self.reminder.removeReminder(date: "\(self.itemArray[indexPath.row].endDate!)")
+                print("Deleting...")
+            }
         }
         self.tableView?.reloadData()
         //Every time you change the database, call this:

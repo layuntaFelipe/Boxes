@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
 
 class BoxesViewController: UIViewController {
     @IBOutlet weak var navItems: UINavigationItem!
@@ -28,10 +29,10 @@ class BoxesViewController: UIViewController {
         super.viewWillAppear(true)
         
         navigationItem.hidesBackButton = true
-//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-////        layout.itemSize = CGSize(width: view.bounds.width / 2.5, height: view.bounds.height / 6)
-//        layout.minimumInteritemSpacing = ((view.bounds.width/2)-145)/2
-//        collectionView?.collectionViewLayout = layout
+        let titleColor = ContrastColorOf(view.backgroundColor!, returnFlat: true)
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+        navigationItem.rightBarButtonItem?.tintColor = titleColor
+        navigationItem.backBarButtonItem?.tintColor = titleColor
     }
     
     override func viewDidAppear(_ animated: Bool) {

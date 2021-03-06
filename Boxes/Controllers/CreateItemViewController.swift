@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
 
 class CreateItemViewController: UIViewController {
 
@@ -16,6 +17,9 @@ class CreateItemViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var switchButtonView: UISwitch!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var buttonView: UIButton!
     
     var localArray = [String]()
     
@@ -26,6 +30,17 @@ class CreateItemViewController: UIViewController {
     var deadLine = false
     
     var isToCreate = true
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let titleColor = ContrastColorOf(view.backgroundColor!, returnFlat: true)
+        newItemView.textColor = titleColor
+        titleLabel.textColor = titleColor
+        descriptionLabel.textColor = titleColor
+        deadLineLabel.textColor = titleColor
+        buttonView.tintColor = titleColor
+        datePickerView.tintColor = titleColor
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
