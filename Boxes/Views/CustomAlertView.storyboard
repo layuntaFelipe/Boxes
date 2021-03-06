@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSc-se-jV4">
-                                <rect key="frame" x="87" y="250" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSc-se-jV4">
+                                <rect key="frame" x="87" y="248" width="240" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRt-7y-Ves">
                                         <rect key="frame" x="2" y="199" width="118" height="38"/>
@@ -80,10 +79,18 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="b3k-Hy-o7p"/>
+                                    <constraint firstAttribute="width" constant="240" id="saG-Ao-8eW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="edN-Un-gsb"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.42615582191780821" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="BSc-se-jV4" firstAttribute="centerY" secondItem="0Ee-pd-AID" secondAttribute="centerY" constant="-80" id="RN2-0g-6CV"/>
+                            <constraint firstItem="BSc-se-jV4" firstAttribute="centerX" secondItem="0Ee-pd-AID" secondAttribute="centerX" id="hh5-RA-exB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="addboxButtonView" destination="bki-HM-kgV" id="ljE-Kc-HVa"/>

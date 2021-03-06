@@ -10,6 +10,7 @@ import CoreData
 
 class CreateItemViewController: UIViewController {
 
+    @IBOutlet weak var deadLineLabel: UILabel!
     @IBOutlet weak var newItemView: UILabel!
     @IBOutlet weak var datePickerView: UIDatePicker!
     @IBOutlet weak var textView: UITextView!

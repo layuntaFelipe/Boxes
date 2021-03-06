@@ -28,6 +28,10 @@ class BoxesViewController: UIViewController {
         super.viewWillAppear(true)
         
         navigationItem.hidesBackButton = true
+//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+////        layout.itemSize = CGSize(width: view.bounds.width / 2.5, height: view.bounds.height / 6)
+//        layout.minimumInteritemSpacing = ((view.bounds.width/2)-145)/2
+//        collectionView?.collectionViewLayout = layout
     }
     
     override func viewDidAppear(_ animated: Bool) {

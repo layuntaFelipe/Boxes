@@ -18,19 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D  O  -  M  O  R  E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZu-bl-vf6">
-                                <rect key="frame" x="150.5" y="512.5" width="113" height="10"/>
-                                <color key="tintColor" name="buttonColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="FIC-pK-0Kx"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="Kqt-pO-vVJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B  E  -  B  E  T  T  E  R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FD-rF-beI">
-                                <rect key="frame" x="135.5" y="373.5" width="143" height="10"/>
+                                <rect key="frame" x="135.5" y="369" width="143" height="10"/>
                                 <color key="tintColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="KwY-Y7-sEb"/>
@@ -47,16 +36,27 @@
                                     <constraint firstAttribute="height" constant="130" id="zGD-VD-C2m"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D  O  -  M  O  R  E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZu-bl-vf6">
+                                <rect key="frame" x="150.5" y="521" width="113" height="10"/>
+                                <color key="tintColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="FIC-pK-0Kx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="Kqt-pO-vVJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KZu-bl-vf6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S1I-mx-2g8"/>
-                            <constraint firstItem="Wwm-Aq-o26" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WXa-bD-e4q"/>
-                            <constraint firstItem="4FD-rF-beI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XXl-wW-xNC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KZu-bl-vf6" secondAttribute="bottom" constant="339.5" id="bur-ox-BUS"/>
-                            <constraint firstItem="Wwm-Aq-o26" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eJr-Hq-gj0"/>
-                            <constraint firstItem="4FD-rF-beI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="329.5" id="pJp-Db-ACb"/>
+                            <constraint firstItem="Wwm-Aq-o26" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1gg-ug-t9i"/>
+                            <constraint firstItem="Wwm-Aq-o26" firstAttribute="top" secondItem="4FD-rF-beI" secondAttribute="bottom" constant="4" id="4uY-ZN-UGf"/>
+                            <constraint firstItem="KZu-bl-vf6" firstAttribute="top" secondItem="Wwm-Aq-o26" secondAttribute="bottom" constant="8" symbolic="YES" id="7xz-7M-y6i"/>
+                            <constraint firstItem="Wwm-Aq-o26" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="R0S-AJ-url"/>
+                            <constraint firstItem="KZu-bl-vf6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sw0-0u-run"/>
+                            <constraint firstItem="4FD-rF-beI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yyq-wY-0cx"/>
                         </constraints>
                     </view>
                 </viewController>

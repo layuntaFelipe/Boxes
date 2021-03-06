@@ -221,10 +221,9 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
             destVC.titleTextField.text = itemArray[itemNumber].title
             if itemArray[itemNumber].hasDeadLine {
                 //Problema na hora de mudar a data!!!!!
-                destVC.switchButtonView.isOn = true
-                destVC.datePickerView.isHidden = false
-                print(itemArray[itemNumber].date!)
-                destVC.datePickerView.date = itemArray[itemNumber].endDate!
+                destVC.datePickerView.isHidden = true
+                destVC.switchButtonView.isHidden = true
+                destVC.deadLineLabel.text = "DeadLine: \(itemArray[itemNumber].date!)"
             }
             destVC.textView.text = itemArray[itemNumber].text
         }
