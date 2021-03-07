@@ -23,9 +23,14 @@ class CreateItemViewController: UIViewController {
     
     var localArray = [String]()
     
-    var itemSelected = ToDoItems()
+    var itemSelected : ToDoItems? {
+        didSet {
+            print("Item Setterd")
+            print(itemSelected)
+        }
+    }
     
-    var endDate = Date()
+    var endDate : Date?
     
     var deadLine = false
     
@@ -82,7 +87,9 @@ class CreateItemViewController: UIViewController {
         
     }
     @IBAction func datePickerOpened(_ sender: UIDatePicker) {
-        endDate = sender.date
+        if deadLine {
+            endDate = sender.date
+        }
         print(endDate)
     }
     
@@ -103,10 +110,19 @@ class CreateItemViewController: UIViewController {
             if isToCreate {
                 let destVC = segue.destination as! ItemsTableViewController
                 destVC.namesArray = localArray
+                if deadLine {
+                    endDate = datePickerView.date
+                }
                 destVC.createItem(title: localArray[0], text: localArray[1], deadLine: deadLine, endDate: endDate)
+                print("The end date created is: \(endDate)")
             } else {
                 let destVC = segue.destination as! ItemsTableViewController
-                destVC.updateItem(item: itemSelected, newTitle: localArray[0], newText: localArray[1], hasDeadLine: deadLine, newDate: endDate)
+                print("The item selected is: \(itemSelected)")
+                print("The item new title is: \(localArray[0])")
+                print("The date in the datePicker is: \(datePickerView.date)")
+                endDate = datePickerView.date
+                print("The item new EndDate is: \(endDate)")
+                destVC.updateItem(item: itemSelected!, newTitle: localArray[0], newText: localArray[1], hasDeadLine: deadLine, newDate: endDate!)
             }
         }
     }

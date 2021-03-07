@@ -104,6 +104,8 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, handler) in
             // edit vc code
             print("edit \(indexPath.row)")
+            self.itemArray[indexPath.row].date = Date().addingTimeInterval(10000)
+            tableView.reloadData()
             self.itemNumber = indexPath.row
             self.editMode = true
             self.performSegue(withIdentifier: "createNewItem", sender: self)
@@ -138,7 +140,8 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and endDate: \(String(describing: itemArray[indexPath.row].date))")
+        print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and date: \(String(describing: itemArray[indexPath.row].date)) and endDate is: \(itemArray[indexPath.row].endDate)")
+        
         
         print("Does it has DeadLine: \(itemArray[indexPath.row].hasDeadLine)")
         
@@ -176,7 +179,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func createItem(title: String, text: String, deadLine: Bool, endDate: Date) {
+    func createItem(title: String, text: String, deadLine: Bool, endDate: Date?) {
         let newItem = ToDoItems(context: context)
         newItem.title = title
         newItem.done = false
@@ -185,7 +188,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         newItem.hasDeadLine = deadLine
         if newItem.hasDeadLine {
             newItem.endDate = endDate
-            reminder.createReminder(title: title, text: text, date: endDate)
+            reminder.createReminder(title: title, text: text, date: endDate!)
         }
         newItem.parentCategory = selectedCategory
         // The endDate is NOT changing as the DatePicker Changes!
@@ -210,12 +213,12 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func updateItem(item: ToDoItems, newTitle: String, newText: String, hasDeadLine: Bool, newDate: Date) {
+    func updateItem(item: ToDoItems, newTitle: String, newText: String, hasDeadLine: Bool, newDate: Date?) {
         item.title = newTitle
         item.text = newText
         item.hasDeadLine = hasDeadLine
         if item.hasDeadLine {
-            item.date = newDate
+            item.endDate = newDate
         }
         self.tableView?.reloadData()
         do {
@@ -243,10 +246,13 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
             destVC.titleTextField.text = itemArray[itemNumber].title
             if itemArray[itemNumber].hasDeadLine {
                 //Problema na hora de mudar a data!!!!!
-                destVC.datePickerView.isHidden = true
-                destVC.switchButtonView.isHidden = true
-                destVC.deadLineLabel.text = "DeadLine: \(itemArray[itemNumber].date!)"
+                destVC.datePickerView.isHidden = false
+                destVC.switchButtonView.isHidden = false
+                destVC.switchButtonView.isOn = true
+                destVC.datePickerView.date = itemArray[itemNumber].endDate!
+//                destVC.deadLineLabel.text = "DeadLine: \(itemArray[itemNumber].endDate!)"
             }
+            
             destVC.textView.text = itemArray[itemNumber].text
         }
     }
