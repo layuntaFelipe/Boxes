@@ -178,14 +178,6 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="145" height="145"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bYA-Ct-djb">
-                                        <rect key="frame" x="183" y="16.5" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eG7-pZ-pfq">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“The Future Belongs To The Competent. Get Good, Get Better, Be The Best!” – Brian Tracy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="363-Mp-9EF">

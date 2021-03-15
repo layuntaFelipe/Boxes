@@ -30,3 +30,16 @@ class AlertService {
     }
     
 }
+
+class PopUpService {
+    func popUp(title: String, description: String, dateString: String?, color: UIColor) -> UIViewController {
+        let storyboard = UIStoryboard(name: "PopUpView", bundle: .main)
+        let popUp = storyboard.instantiateViewController(identifier: "PopUpVC") as! PopUpViewController
+        popUp.popUpTitle = title
+        popUp.popUpDescription = description
+        popUp.popUpDate = dateString
+        popUp.color = color
+        
+        return popUp
+    }
+}

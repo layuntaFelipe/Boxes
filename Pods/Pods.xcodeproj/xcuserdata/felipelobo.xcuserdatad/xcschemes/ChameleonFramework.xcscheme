@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B638CEEAF1B992479ACE12618DB82603"
-               BuildableName = "ISEmojiView.bundle"
-               BlueprintName = "ISEmojiView-ISEmojiView"
+               BlueprintIdentifier = "28BFDC89BA4363F4F3576DEC70EE10AE"
+               BuildableName = "ChameleonFramework.framework"
+               BlueprintName = "ChameleonFramework"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

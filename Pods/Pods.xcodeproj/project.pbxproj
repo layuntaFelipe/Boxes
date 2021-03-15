@@ -129,7 +129,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0383903D05EDD5C442C682C1F7A1752D /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ChameleonFramework.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0383903D05EDD5C442C682C1F7A1752D /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9DE64FB8D2E4B70362ECED20CB004C /* ISEmojiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISEmojiView-prefix.pch"; sourceTree = "<group>"; };
 		0C54DEB33F8ECAF25C498388EB4B968A /* PageControlBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageControlBottomView.swift; path = Source/Classes/Views/BottomViews/PageControlBottomView/PageControlBottomView.swift; sourceTree = "<group>"; };
 		10B16891E80C797DCD97BB42989D0178 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		251D60A893F479C33123291FB0EED416 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		25FF3ABB3A75CAF6FA42FB57276C1582 /* Pods-Boxes-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Boxes-dummy.m"; sourceTree = "<group>"; };
 		294A15F3BBB6E790AF03B7570339F569 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Source/Assets/Images.xcassets; sourceTree = "<group>"; };
-		29BEC65A4B92CC2BC545360F39188306 /* Pods_Boxes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Boxes.framework; path = "Pods-Boxes.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29BEC65A4B92CC2BC545360F39188306 /* Pods_Boxes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boxes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A670287DFEC24E31CE19A46B0C88494 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Classes/Helpers/Constants.swift; sourceTree = "<group>"; };
 		2B5F95A3F2B62DBB8C2A97143B5A8C1A /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
 		2D8E8AB322EE94037E8347C1BD0F595E /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 		40EAF272053C13C65B7C1C53BE2228AB /* ic_smileys_people@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_smileys_people@2x.png"; path = "Source/Assets/Images/ic_smileys_people@2x.png"; sourceTree = "<group>"; };
 		43F3C6A7037843CBC1AAD6786F0927E9 /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
 		44BF035371BC4E6F2952D60455F74B49 /* EmojiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiView.swift; path = Source/Classes/Views/EmojiView/EmojiView.swift; sourceTree = "<group>"; };
-		4B73F2708D98E87633C33F88744E3949 /* Views */ = {isa = PBXFileReference; includeInIndex = 1; name = Views; path = Source/Assets/Views; sourceTree = "<group>"; };
-		503DA7A0D388AA0DEE0FF08C7252618C /* ISEmojiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ISEmojiView.framework; path = ISEmojiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B73F2708D98E87633C33F88744E3949 /* Views */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Views; path = Source/Assets/Views; sourceTree = "<group>"; };
+		503DA7A0D388AA0DEE0FF08C7252618C /* ISEmojiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISEmojiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		519DA0777B1F7FD7902C6FFAC147AEB9 /* ChameleonShorthand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChameleonShorthand.swift; path = Pod/Classes/Swift/ChameleonShorthand.swift; sourceTree = "<group>"; };
 		53D4EB910589478AC98B13A1F3AA4204 /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
 		57A3678B3DF702878E946E2A5DD83706 /* ic_travel_places.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ic_travel_places.png; path = Source/Assets/Images/ic_travel_places.png; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		78FCD4C5C6E15E043F609B7DA2A94886 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
 		791D85D16DAF27135BC06658D4064B4B /* EmojiCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiCollectionView.swift; path = Source/Classes/Views/EmojiCollectionView/EmojiCollectionView.swift; sourceTree = "<group>"; };
 		7965ECBB2C4758C16E183F6090145C53 /* Pods-Boxes.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Boxes.modulemap"; sourceTree = "<group>"; };
-		7C6721132880812703BB24882682F913 /* Images */ = {isa = PBXFileReference; includeInIndex = 1; name = Images; path = Source/Assets/Images; sourceTree = "<group>"; };
+		7C6721132880812703BB24882682F913 /* Images */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Images; path = Source/Assets/Images; sourceTree = "<group>"; };
 		7ED357C387EB25D2880CB630CBF68B63 /* ISEmojiList.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = ISEmojiList.plist; path = Source/Assets/ISEmojiList.plist; sourceTree = "<group>"; };
 		81541E56A5A3F89F53622DF4E189B119 /* ic_smileys_people@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_smileys_people@3x.png"; path = "Source/Assets/Images/ic_smileys_people@3x.png"; sourceTree = "<group>"; };
 		8418DB8FD625375BDA37DE0186C54057 /* RecentEmojisManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecentEmojisManager.swift; path = Source/Classes/Helpers/RecentEmojisManager.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		9A85BF2614100BCC5AEE677EB494B5C4 /* ic_travel_places@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_travel_places@2x.png"; path = "Source/Assets/Images/ic_travel_places@2x.png"; sourceTree = "<group>"; };
 		9CDA0998D08C9D9A4C93E48183457F8C /* ic_activity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_activity@2x.png"; path = "Source/Assets/Images/ic_activity@2x.png"; sourceTree = "<group>"; };
 		9D64839C7DA9A627661F37E0BFC808EA /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A08B4AC6BF1A7F33187091E5EBAA0EC3 /* ChameleonFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-umbrella.h"; sourceTree = "<group>"; };
 		A29DCC3504DB98DCB4ACC9FAC273C045 /* Emoji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = Source/Classes/Models/Emoji.swift; sourceTree = "<group>"; };
 		A2A1EA22D74B5EE43F444ACABACE11BE /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		D2A0BEC423CC8C10FA7EE39DFF4BC4AE /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
 		D2A28A59FCEA84280A5C99C0854C881C /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
 		D3947EEAF1A2CF69076BE42C588571F0 /* ChameleonFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChameleonFramework.debug.xcconfig; sourceTree = "<group>"; };
-		DBB02C34A28521860A3647146E937055 /* ISEmojiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ISEmojiView.bundle; path = "ISEmojiView-ISEmojiView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB02C34A28521860A3647146E937055 /* ISEmojiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISEmojiView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCEA4E21AF0C19778CEAAFB29CF1E85 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
 		DCC259BB809EB1321B8ED50FF850F92A /* ic_objects.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ic_objects.png; path = Source/Assets/Images/ic_objects.png; sourceTree = "<group>"; };
 		E08BF58EF7C2F66607F01F81D50DB139 /* ic_symbols@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_symbols@2x.png"; path = "Source/Assets/Images/ic_symbols@2x.png"; sourceTree = "<group>"; };
@@ -446,7 +446,6 @@
 				7562511A726E8A4D1E18F94780BAF30E /* Resources */,
 				34916E3D1FBFFEA4B9B7B884AA0A4D3F /* Support Files */,
 			);
-			name = ISEmojiView;
 			path = ISEmojiView;
 			sourceTree = "<group>";
 		};
@@ -465,7 +464,6 @@
 				D1FDC46B7C31F8B4D3DB994E6EE25A15 /* Support Files */,
 				E2EEB72F4CC2B7CF873379BCFA5C67C5 /* Swift */,
 			);
-			name = ChameleonFramework;
 			path = ChameleonFramework;
 			sourceTree = "<group>";
 		};
@@ -640,7 +638,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -833,7 +831,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ChameleonFramework/ChameleonFramework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -905,7 +903,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ChameleonFramework/ChameleonFramework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -940,7 +938,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ISEmojiView/ISEmojiView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ISEmojiView/ISEmojiView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -967,7 +965,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ISEmojiView";
 				IBSC_MODULE = ISEmojiView;
 				INFOPLIST_FILE = "Target Support Files/ISEmojiView/ResourceBundle-ISEmojiView-ISEmojiView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = ISEmojiView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -991,7 +989,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ISEmojiView/ISEmojiView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ISEmojiView/ISEmojiView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1182,7 +1180,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ISEmojiView";
 				IBSC_MODULE = ISEmojiView;
 				INFOPLIST_FILE = "Target Support Files/ISEmojiView/ResourceBundle-ISEmojiView-ISEmojiView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = ISEmojiView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

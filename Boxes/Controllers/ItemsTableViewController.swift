@@ -21,8 +21,6 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var itemNumber = Int()
     
-    var editMode = false
-    
     var namesArray = [String]()
     
     var selectedCategory: BoxItems? {
@@ -62,6 +60,14 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
             print("Long press on table view, not row.")
         } else if longPressGesture.state == UIGestureRecognizer.State.began {
             print("Long press on row, at \(indexPath!.row)")
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd-hh:mm"
+            let popUpVC = PopUpService()
+            if let safeDate = itemArray[indexPath!.row].endDate {
+                self.present(popUpVC.popUp(title: itemArray[indexPath!.row].title!, description: itemArray[indexPath!.row].text ?? "", dateString: dateFormatter.string(from: safeDate), color: view.backgroundColor!), animated: true)
+            } else {
+                self.present(popUpVC.popUp(title: itemArray[indexPath!.row].title!, description: itemArray[indexPath!.row].text ?? "", dateString: "", color: view.backgroundColor!), animated: true)
+            }
         }
     }
 
@@ -99,21 +105,6 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, handler) in
-            // edit vc code
-            print("edit \(indexPath.row)")
-            self.itemArray[indexPath.row].date = Date().addingTimeInterval(10000)
-            tableView.reloadData()
-            self.itemNumber = indexPath.row
-            self.editMode = true
-            self.performSegue(withIdentifier: "createNewItem", sender: self)
-            handler(true)
-        }
-        let swipe = UISwipeActionsConfiguration(actions: [edit])
-        return swipe
-    }
 
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
@@ -140,7 +131,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and date: \(String(describing: itemArray[indexPath.row].date)) and endDate is: \(itemArray[indexPath.row].endDate)")
+        print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and date: \(String(describing: itemArray[indexPath.row].date)) and endDate is: \(String(describing: itemArray[indexPath.row].endDate))")
         
         
         print("Does it has DeadLine: \(itemArray[indexPath.row].hasDeadLine)")
@@ -192,7 +183,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         newItem.parentCategory = selectedCategory
         // The endDate is NOT changing as the DatePicker Changes!
-        print("The newItem endDate is: \(newItem.endDate)")
+        print("The newItem endDate is: \(String(describing: newItem.endDate))")
         print(newItem.title!)
         print(newItem.text!)
         itemArray.append(newItem)
@@ -230,7 +221,6 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //MARK: - Add New Item
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        editMode = false
         performSegue(withIdentifier: "createNewItem", sender: self)
     }
     
@@ -240,21 +230,6 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! CreateItemViewController
         destVC.view.backgroundColor = self.view.backgroundColor
-        if editMode {
-            destVC.isToCreate = false
-            destVC.itemSelected = itemArray[itemNumber]
-            destVC.titleTextField.text = itemArray[itemNumber].title
-            if itemArray[itemNumber].hasDeadLine {
-                //Problema na hora de mudar a data!!!!!
-                destVC.datePickerView.isHidden = false
-                destVC.switchButtonView.isHidden = false
-                destVC.switchButtonView.isOn = true
-                destVC.datePickerView.date = itemArray[itemNumber].endDate!
-//                destVC.deadLineLabel.text = "DeadLine: \(itemArray[itemNumber].endDate!)"
-            }
-            
-            destVC.textView.text = itemArray[itemNumber].text
-        }
     }
 
 }

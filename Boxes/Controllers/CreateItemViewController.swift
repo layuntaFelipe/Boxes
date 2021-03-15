@@ -10,7 +10,7 @@ import CoreData
 import ChameleonFramework
 
 class CreateItemViewController: UIViewController {
-
+    
     @IBOutlet weak var deadLineLabel: UILabel!
     @IBOutlet weak var newItemView: UILabel!
     @IBOutlet weak var datePickerView: UIDatePicker!
@@ -26,7 +26,7 @@ class CreateItemViewController: UIViewController {
     var itemSelected : ToDoItems? {
         didSet {
             print("Item Setterd")
-            print(itemSelected)
+            print(itemSelected!)
         }
     }
     
@@ -62,7 +62,6 @@ class CreateItemViewController: UIViewController {
         textView.layer.borderColor = UIColor.gray.cgColor
         
         datePickerView.isHidden = true
-        
     }
     
     @objc func dismissKeyboard() {
@@ -72,15 +71,19 @@ class CreateItemViewController: UIViewController {
     func localCreateItem(title: String, text: String) -> [String] {
         
         return [title, text]
-
+        
     }
     
     @IBAction func switchButtonPressed(_ sender: UISwitch) {
         
         if sender.isOn {
+            sender.isOn = false
+            sender.isOn = true
             deadLine = true
             datePickerView.isHidden = false
         } else {
+            sender.isOn = true
+            sender.isOn = false
             deadLine = false
             datePickerView.isHidden = true
         }
@@ -90,14 +93,14 @@ class CreateItemViewController: UIViewController {
         if deadLine {
             endDate = sender.date
         }
-        print(endDate)
+        print(endDate ?? "O DATE PICKE NAO ABRIU PROCURE SABER")
     }
     
     @IBAction func checkButton(_ sender: UIButton) {
         
         localArray = localCreateItem(title: titleTextField.text!, text: textView.text ?? "")
         //Solve the problem in case of not having a endDate
-        print("The endDate is equal to: \(endDate)")
+        print("The endDate is equal to: \(String(describing: endDate))")
         print("local array: \(localArray)")
         print("dismissing newView")
     }
@@ -107,24 +110,14 @@ class CreateItemViewController: UIViewController {
         if titleTextField.text == nil || titleTextField.text == "" {
             Alert.alertNoTitle(on: self, with: "What? No Title?", message: "How would you do nothing?... Serious man, get help... ;)")
         } else {
-            if isToCreate {
-                let destVC = segue.destination as! ItemsTableViewController
-                destVC.namesArray = localArray
-                if deadLine {
-                    endDate = datePickerView.date
-                }
-                destVC.createItem(title: localArray[0], text: localArray[1], deadLine: deadLine, endDate: endDate)
-                print("The end date created is: \(endDate)")
-            } else {
-                let destVC = segue.destination as! ItemsTableViewController
-                print("The item selected is: \(itemSelected)")
-                print("The item new title is: \(localArray[0])")
-                print("The date in the datePicker is: \(datePickerView.date)")
+            let destVC = segue.destination as! ItemsTableViewController
+            destVC.namesArray = localArray
+            if deadLine {
                 endDate = datePickerView.date
-                print("The item new EndDate is: \(endDate)")
-                destVC.updateItem(item: itemSelected!, newTitle: localArray[0], newText: localArray[1], hasDeadLine: deadLine, newDate: endDate!)
             }
+            destVC.createItem(title: localArray[0], text: localArray[1], deadLine: deadLine, endDate: endDate)
+            print("The end date created is: \(String(describing: endDate))")
         }
+        
     }
-    
 }
