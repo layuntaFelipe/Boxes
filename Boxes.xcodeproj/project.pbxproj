@@ -29,6 +29,7 @@
 		27813ACA25E895600066CB32 /* CustomAlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27813AC925E895600066CB32 /* CustomAlertView.storyboard */; };
 		2792C61025EC1BC9001435C7 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792C60F25EC1BC9001435C7 /* ReminderModel.swift */; };
 		27B23CB125FC72B300ABD3F7 /* DataModelsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B23CB025FC72B300ABD3F7 /* DataModelsActions.swift */; };
+		27C7986926003B3C00D10D1A /* HapitcsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7986826003B3C00D10D1A /* HapitcsManager.swift */; };
 		27E3459E25CC7A5C009696B1 /* AlertModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3459D25CC7A5C009696B1 /* AlertModels.swift */; };
 		8F502D9D4834503E9A058233 /* Pods_Boxes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E991E5FCC28B9E0CC6C55CBC /* Pods_Boxes.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		27813AC925E895600066CB32 /* CustomAlertView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomAlertView.storyboard; sourceTree = "<group>"; };
 		2792C60F25EC1BC9001435C7 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		27B23CB025FC72B300ABD3F7 /* DataModelsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelsActions.swift; sourceTree = "<group>"; };
+		27C7986826003B3C00D10D1A /* HapitcsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapitcsManager.swift; sourceTree = "<group>"; };
 		27E3459D25CC7A5C009696B1 /* AlertModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModels.swift; sourceTree = "<group>"; };
 		40772B6AF596EFB4F1BED0D0 /* Pods-Boxes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boxes.release.xcconfig"; path = "Target Support Files/Pods-Boxes/Pods-Boxes.release.xcconfig"; sourceTree = "<group>"; };
 		692ED9AC3906410AF0FA1A9F /* Pods-Boxes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boxes.debug.xcconfig"; path = "Target Support Files/Pods-Boxes/Pods-Boxes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				27583CBC25C88E8F00FE314D /* MyCollectionViewCell.swift */,
 				275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */,
 				27B23CB025FC72B300ABD3F7 /* DataModelsActions.swift */,
+				27C7986826003B3C00D10D1A /* HapitcsManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				27583C9525C887A100FE314D /* AppDelegate.swift in Sources */,
 				275A2AC125CDA88A0042CFC1 /* MyTableViewCell.swift in Sources */,
 				2792C61025EC1BC9001435C7 /* ReminderModel.swift in Sources */,
+				27C7986926003B3C00D10D1A /* HapitcsManager.swift in Sources */,
 				27403EB525D333A300A779FD /* GradientAndColors.swift in Sources */,
 				271521DD25FE6189008C0BCC /* PopUpViewController.swift in Sources */,
 				271A941825C8FA0400263981 /* CreateItemViewController.swift in Sources */,

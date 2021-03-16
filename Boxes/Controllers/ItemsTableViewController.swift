@@ -60,6 +60,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
             print("Long press on table view, not row.")
         } else if longPressGesture.state == UIGestureRecognizer.State.began {
             print("Long press on row, at \(indexPath!.row)")
+            HapticsManager.shared.vibrate(for: .success)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd-hh:mm"
             let popUpVC = PopUpService()
