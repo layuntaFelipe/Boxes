@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class PopUpViewController: UIViewController {
 
@@ -38,9 +39,13 @@ class PopUpViewController: UIViewController {
     
     func setupView() {
         titleView.text = popUpTitle
+        titleView.textColor = ContrastColorOf(color, returnFlat: true)
         descriptionView.text = popUpDescription
+        descriptionView.textColor = ContrastColorOf(color, returnFlat: true)
         dateView.text = popUpDate ?? ""
+        dateView.textColor = ContrastColorOf(color, returnFlat: true)
         popUpView.backgroundColor = color
+        
     }
     
 }
