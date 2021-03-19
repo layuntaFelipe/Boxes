@@ -37,6 +37,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let titleColor = ContrastColorOf(view.backgroundColor!, returnFlat: true)
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
         navigationItem.rightBarButtonItem?.tintColor = titleColor
+        navigationController?.navigationBar.tintColor = titleColor
     }
 
     override func viewDidLoad() {
@@ -131,6 +132,7 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        HapticsManager.shared.vibrate(for: .success)
         
         print("The \(itemArray[indexPath.row].title!) has \(itemArray[indexPath.row].text!) and date: \(String(describing: itemArray[indexPath.row].date)) and endDate is: \(String(describing: itemArray[indexPath.row].endDate))")
         
@@ -144,6 +146,12 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
             if self.itemArray[indexPath.row].hasDeadLine {
                 self.reminder.removeReminder(date: "\(self.itemArray[indexPath.row].endDate!)")
                 print("Deleting...")
+            }
+        } else {
+            print("NOT DONE YET")
+            if self.itemArray[indexPath.row].hasDeadLine {
+                self.reminder.createReminder(title: self.itemArray[indexPath.row].title!, text: self.itemArray[indexPath.row].text ?? "", date: self.itemArray[indexPath.row].endDate!)
+                print("Recreating...")
             }
         }
         self.tableView?.reloadData()

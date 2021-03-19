@@ -32,7 +32,7 @@ class BoxesViewController: UIViewController {
         let titleColor = ContrastColorOf(view.backgroundColor!, returnFlat: true)
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
         navigationItem.rightBarButtonItem?.tintColor = titleColor
-        navigationItem.backBarButtonItem?.tintColor = titleColor
+        navigationController?.navigationBar.tintColor = titleColor
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -175,6 +175,7 @@ extension BoxesViewController: UICollectionViewDelegate {
                 }
                 self.deleteBox(box: self.boxArray[indexPath.row])
                 self.boxArray.remove(at: indexPath.row)
+                HapticsManager.shared.vibrate(for: .error)
             }))
             self.present(alert, animated: true, completion: nil)
         }
@@ -214,7 +215,9 @@ extension BoxesViewController: UICollectionViewDataSource {
         cell.titleView?.text = box.name
         cell.iconView?.text = box.icon
         cell.numberView.text = String(box.number)
+        cell.numberView.textColor = ContrastColorOf(UIColor(hexString: box.color!)!, returnFlat: true)
         cell.backgroundCellView.layer.borderColor = UIColor(hexString: box.color!)?.cgColor
+        cell.circleView.backgroundColor = UIColor(hexString: box.color!)
         
         if isToDelete {
             cell.numberView.text = "-"
