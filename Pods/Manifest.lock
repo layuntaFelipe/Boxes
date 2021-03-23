@@ -1,16 +1,31 @@
 PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - ISEmojiView (0.2.6)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon.git`, branch `swift5`)
   - ISEmojiView
 
 SPEC REPOS:
   trunk:
     - ISEmojiView
 
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :branch: swift5
+    :git: https://github.com/wowansm/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 96d52c36a45847fff60bcff7a58fec1e4bd7390b
+    :git: https://github.com/wowansm/Chameleon.git
+
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   ISEmojiView: f7cd94a6c93307f429ec5da001293d0b02247f03
 
-PODFILE CHECKSUM: 96a479b3a5416f4a79d6127d6fbb336a1f83af0e
+PODFILE CHECKSUM: 435d8e8123d3b4e93c4fa0200b8aa79aa15fdef6
 
 COCOAPODS: 1.10.1
