@@ -8,7 +8,8 @@
 import Foundation
 
 struct Quotes {
-    public let listQuotes = [
+    
+    private let listQuotes = [
         "'All our dreams can come true, if we have the courage to pursue them.' – Walt Disney",
         "'The secret of getting ahead is getting started.' – Mark Twain",
         "'The best time to plant a tree was 20 years ago. The second best time is now.' – Chinese Proverb",
@@ -35,7 +36,8 @@ struct Quotes {
         "“The Future Belongs To The Competent. Get Good, Get Better, Be The Best!” – Brian Tracy"
     ]
     
-    func getRandomQuote() -> String {
+    func getRandom() -> String {
         return listQuotes.randomElement()!
     }
+    
 }

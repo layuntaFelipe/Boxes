@@ -21,20 +21,20 @@ class CreateItemViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var buttonView: UIButton!
     
-    var localArray = [String]()
+    private var localArray = [String]()
     
-    var itemSelected : ToDoItems? {
+    private var itemSelected : ToDoItems? {
         didSet {
             print("Item Setterd")
             print(itemSelected!)
         }
     }
     
-    var endDate : Date?
+    private var endDate : Date?
     
-    var deadLine = false
+    private var deadLine = false
     
-    var isToCreate = true
+    private var isToCreate = true
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -16,7 +16,7 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var redView: UIView!
     @IBOutlet weak var endDateLabel: UILabel!
     
-    var didSelectEndDate: Bool = true
+    private var didSelectEndDate: Bool = true
     
     override func awakeFromNib() {
         super.awakeFromNib()

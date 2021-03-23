@@ -15,7 +15,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet var titleView: UILabel!
     @IBOutlet var numberView: UILabel!
     
-    var numberTitle = "12"
+    private var numberTitle = "12"
 
     override func awakeFromNib() {
         super.awakeFromNib()

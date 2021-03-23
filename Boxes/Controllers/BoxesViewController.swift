@@ -15,15 +15,17 @@ class BoxesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var quoteView: UILabel?
     
-    var boxArray = [BoxItems]()
-    var quotes = Quotes()
-    var titleNavigation = String()
+    private var boxArray = [BoxItems]()
+    private var quotes = Quotes()
+    private var titleNavigation = String()
     
-    var boxNumber = Int()
+    private let center = UNUserNotificationCenter.current()
     
-    var isToDelete = false
+    private var boxNumber = Int()
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var isToDelete = false
+    
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -45,30 +47,21 @@ class BoxesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        
         // Get a random quote and show on view
-        quoteView?.text = quotes.getRandomQuote()
-        
+        quoteView?.text = quotes.getRandom()
+        // Get the collectionView Ready
         collectionView?.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
-        
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        
         // CoreData read box data and show up on view
         getAllBoxes()
-        
     }
 
     //MARK: - Buttons Models
     
-    let alertService = AlertService()
-    
     //Add Button - To create New Boxes
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
-        let customAlertVC = alertService.alert()
+        let customAlertVC = CustomBox().box()
         present(customAlertVC, animated: true)
     }
     
@@ -171,6 +164,9 @@ extension BoxesViewController: UICollectionViewDelegate {
                 itemsOfTheBox.selectedCategory = self.boxArray[indexPath.row]
                 for item in itemsOfTheBox.itemArray {
                     print("deleting a item:")
+                    if item.hasDeadLine {
+                        self.center.removePendingNotificationRequests(withIdentifiers: ["\(item.endDate!)"])
+                    }
                     itemsOfTheBox.deleteItem(item: item)
                 }
                 self.deleteBox(box: self.boxArray[indexPath.row])
@@ -184,7 +180,6 @@ extension BoxesViewController: UICollectionViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CategoryToItem" {
             let destinationVC = segue.destination as! ItemsTableViewController
-            destinationVC.navItem!.title = "\(titleNavigation) Items"
             destinationVC.selectedCategory = boxArray[boxNumber]
             destinationVC.view.backgroundColor = UIColor(hexString: boxArray[boxNumber].color!)
         }

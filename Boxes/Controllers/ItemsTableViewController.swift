@@ -15,11 +15,11 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var navItem: UINavigationItem?
     @IBOutlet var tableView: UITableView?
     
-    let reminder = Reminders.init(center: UNUserNotificationCenter.current())
+    private let reminder = Reminders.init(center: UNUserNotificationCenter.current())
     
     var itemArray = [ToDoItems]()
     
-    var itemNumber = Int()
+    private var itemNumber = Int()
     
     var namesArray = [String]()
     
@@ -33,6 +33,10 @@ class ItemsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewWillAppear(_ animated: Bool) {
+        guard let title = selectedCategory?.name else {
+            return
+        }
+        navigationItem.title = "\(title) Items"
         super.viewWillAppear(animated)
         let titleColor = ContrastColorOf(view.backgroundColor!, returnFlat: true)
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]

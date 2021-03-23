@@ -10,7 +10,7 @@ import UserNotifications
 
 class Reminders {
     
-    let center : UNUserNotificationCenter
+    private let center : UNUserNotificationCenter
     
     init(center: UNUserNotificationCenter) {
         self.center = UNUserNotificationCenter.current()
@@ -39,9 +39,5 @@ class Reminders {
     func removeReminder(date: String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [date])
         print("deleting...")
-    }
-    
-    func getId() {
-        
     }
 }

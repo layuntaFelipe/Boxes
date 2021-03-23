@@ -11,7 +11,6 @@
 		271521DD25FE6189008C0BCC /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271521DC25FE6189008C0BCC /* PopUpViewController.swift */; };
 		271A941825C8FA0400263981 /* CreateItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A941725C8FA0400263981 /* CreateItemViewController.swift */; };
 		27403EAD25D30D8D00A779FD /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27403EAC25D30D8D00A779FD /* AnimationViewController.swift */; };
-		27403EB525D333A300A779FD /* GradientAndColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27403EB425D333A300A779FD /* GradientAndColors.swift */; };
 		27583C9525C887A100FE314D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9425C887A100FE314D /* AppDelegate.swift */; };
 		27583C9725C887A100FE314D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9625C887A100FE314D /* SceneDelegate.swift */; };
 		27583C9925C887A100FE314D /* BoxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9825C887A100FE314D /* BoxesViewController.swift */; };
@@ -25,10 +24,9 @@
 		27583CBF25C88E8F00FE314D /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27583CBD25C88E8F00FE314D /* MyCollectionViewCell.xib */; };
 		275A2AC125CDA88A0042CFC1 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */; };
 		275A2AC225CDA88A0042CFC1 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275A2AC025CDA88A0042CFC1 /* MyTableViewCell.xib */; };
-		27813AC725E895400066CB32 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27813AC625E895400066CB32 /* CustomAlertViewController.swift */; };
-		27813ACA25E895600066CB32 /* CustomAlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27813AC925E895600066CB32 /* CustomAlertView.storyboard */; };
+		27813AC725E895400066CB32 /* CustomBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27813AC625E895400066CB32 /* CustomBoxViewController.swift */; };
+		27813ACA25E895600066CB32 /* CustomBoxView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27813AC925E895600066CB32 /* CustomBoxView.storyboard */; };
 		2792C61025EC1BC9001435C7 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792C60F25EC1BC9001435C7 /* ReminderModel.swift */; };
-		27B23CB125FC72B300ABD3F7 /* DataModelsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B23CB025FC72B300ABD3F7 /* DataModelsActions.swift */; };
 		27C7986926003B3C00D10D1A /* HapitcsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7986826003B3C00D10D1A /* HapitcsManager.swift */; };
 		27E3459E25CC7A5C009696B1 /* AlertModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3459D25CC7A5C009696B1 /* AlertModels.swift */; };
 		8F502D9D4834503E9A058233 /* Pods_Boxes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E991E5FCC28B9E0CC6C55CBC /* Pods_Boxes.framework */; };
@@ -39,7 +37,6 @@
 		271521DC25FE6189008C0BCC /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		271A941725C8FA0400263981 /* CreateItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemViewController.swift; sourceTree = "<group>"; };
 		27403EAC25D30D8D00A779FD /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
-		27403EB425D333A300A779FD /* GradientAndColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientAndColors.swift; sourceTree = "<group>"; };
 		27583C9125C887A100FE314D /* Boxes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27583C9425C887A100FE314D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27583C9625C887A100FE314D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +52,9 @@
 		27583CBD25C88E8F00FE314D /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		275A2AC025CDA88A0042CFC1 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
-		27813AC625E895400066CB32 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
-		27813AC925E895600066CB32 /* CustomAlertView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomAlertView.storyboard; sourceTree = "<group>"; };
+		27813AC625E895400066CB32 /* CustomBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBoxViewController.swift; sourceTree = "<group>"; };
+		27813AC925E895600066CB32 /* CustomBoxView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomBoxView.storyboard; sourceTree = "<group>"; };
 		2792C60F25EC1BC9001435C7 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
-		27B23CB025FC72B300ABD3F7 /* DataModelsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelsActions.swift; sourceTree = "<group>"; };
 		27C7986826003B3C00D10D1A /* HapitcsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapitcsManager.swift; sourceTree = "<group>"; };
 		27E3459D25CC7A5C009696B1 /* AlertModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModels.swift; sourceTree = "<group>"; };
 		40772B6AF596EFB4F1BED0D0 /* Pods-Boxes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boxes.release.xcconfig"; path = "Target Support Files/Pods-Boxes/Pods-Boxes.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +111,7 @@
 			children = (
 				27403EAC25D30D8D00A779FD /* AnimationViewController.swift */,
 				27583C9825C887A100FE314D /* BoxesViewController.swift */,
-				27813AC625E895400066CB32 /* CustomAlertViewController.swift */,
+				27813AC625E895400066CB32 /* CustomBoxViewController.swift */,
 				27583CB625C88DF200FE314D /* ItemsTableViewController.swift */,
 				271A941725C8FA0400263981 /* CreateItemViewController.swift */,
 				271521DC25FE6189008C0BCC /* PopUpViewController.swift */,
@@ -128,7 +124,7 @@
 			children = (
 				275A2AC025CDA88A0042CFC1 /* MyTableViewCell.xib */,
 				271521D925FE615E008C0BCC /* PopUpView.storyboard */,
-				27813AC925E895600066CB32 /* CustomAlertView.storyboard */,
+				27813AC925E895600066CB32 /* CustomBoxView.storyboard */,
 				27583CA225C887A200FE314D /* LaunchScreen.storyboard */,
 				27583CBD25C88E8F00FE314D /* MyCollectionViewCell.xib */,
 				27583C9A25C887A100FE314D /* Main.storyboard */,
@@ -143,10 +139,8 @@
 				2792C60F25EC1BC9001435C7 /* ReminderModel.swift */,
 				27583CB925C88E5100FE314D /* Quotes.swift */,
 				27E3459D25CC7A5C009696B1 /* AlertModels.swift */,
-				27403EB425D333A300A779FD /* GradientAndColors.swift */,
 				27583CBC25C88E8F00FE314D /* MyCollectionViewCell.swift */,
 				275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */,
-				27B23CB025FC72B300ABD3F7 /* DataModelsActions.swift */,
 				27C7986826003B3C00D10D1A /* HapitcsManager.swift */,
 			);
 			path = Models;
@@ -234,7 +228,7 @@
 				27583CA125C887A200FE314D /* Assets.xcassets in Resources */,
 				27583CBF25C88E8F00FE314D /* MyCollectionViewCell.xib in Resources */,
 				27583C9C25C887A100FE314D /* Main.storyboard in Resources */,
-				27813ACA25E895600066CB32 /* CustomAlertView.storyboard in Resources */,
+				27813ACA25E895600066CB32 /* CustomBoxView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +288,9 @@
 				275A2AC125CDA88A0042CFC1 /* MyTableViewCell.swift in Sources */,
 				2792C61025EC1BC9001435C7 /* ReminderModel.swift in Sources */,
 				27C7986926003B3C00D10D1A /* HapitcsManager.swift in Sources */,
-				27403EB525D333A300A779FD /* GradientAndColors.swift in Sources */,
 				271521DD25FE6189008C0BCC /* PopUpViewController.swift in Sources */,
 				271A941825C8FA0400263981 /* CreateItemViewController.swift in Sources */,
-				27813AC725E895400066CB32 /* CustomAlertViewController.swift in Sources */,
-				27B23CB125FC72B300ABD3F7 /* DataModelsActions.swift in Sources */,
+				27813AC725E895400066CB32 /* CustomBoxViewController.swift in Sources */,
 				27583CBA25C88E5100FE314D /* Quotes.swift in Sources */,
 				27583CB725C88DF200FE314D /* ItemsTableViewController.swift in Sources */,
 				27583C9725C887A100FE314D /* SceneDelegate.swift in Sources */,

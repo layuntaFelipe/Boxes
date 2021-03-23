@@ -9,7 +9,7 @@ import UIKit
 import ISEmojiView
 import ChameleonFramework
 
-class CustomAlertViewController: UIViewController, EmojiViewDelegate {
+class CustomBoxViewController: UIViewController, EmojiViewDelegate {
     
     // callback when tap a emoji on keyboard
     func emojiViewDidSelectEmoji(_ emoji: String, emojiView: EmojiView) {
@@ -43,7 +43,7 @@ class CustomAlertViewController: UIViewController, EmojiViewDelegate {
     @IBOutlet weak var addboxButtonView: UIButton!
     @IBOutlet weak var rectangleView: UIView!
     
-    var boxColor = String()
+    private var boxColor = String()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -59,6 +59,7 @@ class CustomAlertViewController: UIViewController, EmojiViewDelegate {
         let keyboardSettings = KeyboardSettings(bottomType: .categories)
         let emojiView = EmojiView(keyboardSettings: keyboardSettings)
         emojiView.translatesAutoresizingMaskIntoConstraints = false
+        emojiView.setupView()
         emojiView.delegate = self
         textView.inputView = emojiView
         
@@ -105,8 +106,19 @@ class CustomAlertViewController: UIViewController, EmojiViewDelegate {
     
 }
 
-extension CustomAlertViewController: UITextFieldDelegate {
+extension CustomBoxViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         iconLabel.text = textField.text
+    }
+}
+
+extension EmojiView{
+    func setupView() {
+        if #available(iOS 13, *) {
+            backgroundColor = UIColor.secondarySystemBackground
+        }
+        else {
+            backgroundColor = UIColor(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 1)
+        }
     }
 }

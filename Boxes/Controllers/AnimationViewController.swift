@@ -26,7 +26,7 @@ class AnimationViewController: UIViewController {
         animateRotation()
     }
     
-    func animateRotation() {
+    private func animateRotation() {
         let animation = CABasicAnimation()
         animation.keyPath = "transform.rotation.z"
         animation.fromValue = 0
