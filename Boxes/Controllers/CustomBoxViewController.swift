@@ -89,21 +89,26 @@ class CustomBoxViewController: UIViewController, EmojiViewDelegate {
 
     @IBAction func addButtonPressed(_ sender: UIButton) {
         
+        let alert = Alert()
+        
         if nameTextView.text == nil || nameTextView.text == "" {
-            Alert.alertNoTitle(on: self, with: "What? No Title?", message: "How would you put something on nothing?... Serious man, get help... ;)")
+            alert.alert(vc: self, title: "What? No Title?", message: "How would you put something on nothing?... Serious man, get help... ;)", style: .alert)
+        } else if textView.text == nil || textView.text == "" {
+            alert.alert(vc: self, title: "What? No Icon?", message: "How would you place something whithout a icon?", style: .alert)
+        } else {
+            performSegue(withIdentifier: "ExitBox", sender: self)
+            print("Doing the perform")
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if nameTextView.text == nil || nameTextView.text == "" {
-        } else {
-            let destVC = segue.destination as! BoxesViewController
-            destVC.createBox(name: nameTextView.text!, icon: textView.text ?? "", color: boxColor)
-        }
+        let destiVC = segue.destination as! BoxesViewController
+        destiVC.createBox(name: nameTextView.text!, icon: textView.text!, color: boxColor)
     }
     
-    @IBAction func cancelButtonPressed(_ sender: UIButton) {}
-    
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension CustomBoxViewController: UITextFieldDelegate {

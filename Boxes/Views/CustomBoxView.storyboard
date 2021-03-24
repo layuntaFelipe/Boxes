@@ -29,7 +29,6 @@
                                         </state>
                                         <connections>
                                             <action selector="cancelButtonPressed:" destination="3IR-uY-iid" eventType="touchUpInside" id="9Om-tC-7NT"/>
-                                            <segue destination="bGM-Eb-QZC" kind="unwind" unwindAction="unwindToBox:" id="eqg-7A-B03"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Icon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brq-OV-GQj">
@@ -67,7 +66,6 @@
                                         <state key="normal" title="Add Box"/>
                                         <connections>
                                             <action selector="addButtonPressed:" destination="3IR-uY-iid" eventType="touchUpInside" id="DxW-YR-JnU"/>
-                                            <segue destination="bGM-Eb-QZC" kind="unwind" unwindAction="unwindToBox:" id="PWQ-Od-EEB"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="📦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bus-OK-ziF">
@@ -100,6 +98,7 @@
                         <outlet property="nameTextView" destination="T3s-To-oSA" id="daz-M1-0cK"/>
                         <outlet property="rectangleView" destination="dVP-W1-XXd" id="j6e-Ds-4Uj"/>
                         <outlet property="textView" destination="brq-OV-GQj" id="pxz-DY-10m"/>
+                        <segue destination="bGM-Eb-QZC" kind="unwind" identifier="ExitBox" unwindAction="unwindToBox:" id="r4l-Ak-KMW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmE-KJ-y5D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

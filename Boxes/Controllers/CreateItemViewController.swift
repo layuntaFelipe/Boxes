@@ -103,21 +103,24 @@ class CreateItemViewController: UIViewController {
         print("The endDate is equal to: \(String(describing: endDate))")
         print("local array: \(localArray)")
         print("dismissing newView")
+        let alert = Alert()
+        if titleTextField.text == nil || titleTextField.text == "" {
+            alert.alert(vc: self, title: "What? No Title?", message: "How would you do nothing?... Serious man, get help... ;)", style: .alert)
+        } else {
+            performSegue(withIdentifier: "ExitCreateItem", sender: self)
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if titleTextField.text == nil || titleTextField.text == "" {
-            Alert.alertNoTitle(on: self, with: "What? No Title?", message: "How would you do nothing?... Serious man, get help... ;)")
-        } else {
-            let destVC = segue.destination as! ItemsTableViewController
-            destVC.namesArray = localArray
-            if deadLine {
-                endDate = datePickerView.date
-            }
-            destVC.createItem(title: localArray[0], text: localArray[1], deadLine: deadLine, endDate: endDate)
-            print("The end date created is: \(String(describing: endDate))")
+        let destVC = segue.destination as! ItemsTableViewController
+        destVC.namesArray = localArray
+        if deadLine {
+            endDate = datePickerView.date
         }
+        destVC.createItem(title: localArray[0], text: localArray[1], deadLine: deadLine, endDate: endDate)
+        print("The end date created is: \(String(describing: endDate))")
         
     }
 }

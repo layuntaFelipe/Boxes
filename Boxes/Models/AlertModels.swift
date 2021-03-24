@@ -9,11 +9,16 @@ import Foundation
 import UIKit
 
 struct Alert {
-    static func alertNoTitle(on vc: UIViewController, with title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    
+    func alert(vc: UIViewController,title: String, message: String, style: UIAlertController.Style) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
         vc.present(alert, animated: true, completion: nil)
+        return alert
     }
+    
 }
 
 struct CustomBox {
