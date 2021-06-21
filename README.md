@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" src="ReadmeImages/boxeslogo.png" alt="Boxes Logo" width="150"/>
+  <img align="center" src="ReadmeImages/boxeslogo.png" alt="Boxes Logo" width="120"/>
   <h1 align="center">Boxes</h1>
   <h2 align="center">A different way of seen a simple and common kind of app, standing out from the crowd, making it appeal more to the public.</h2>
   <p float="left">
