@@ -11,6 +11,7 @@
 		271521DD25FE6189008C0BCC /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271521DC25FE6189008C0BCC /* PopUpViewController.swift */; };
 		271A941825C8FA0400263981 /* CreateItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A941725C8FA0400263981 /* CreateItemViewController.swift */; };
 		27403EAD25D30D8D00A779FD /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27403EAC25D30D8D00A779FD /* AnimationViewController.swift */; };
+		27475EE926859DBB007B2A11 /* TrackingTransparencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27475EE826859DBB007B2A11 /* TrackingTransparencyManager.swift */; };
 		27583C9525C887A100FE314D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9425C887A100FE314D /* AppDelegate.swift */; };
 		27583C9725C887A100FE314D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9625C887A100FE314D /* SceneDelegate.swift */; };
 		27583C9925C887A100FE314D /* BoxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27583C9825C887A100FE314D /* BoxesViewController.swift */; };
@@ -37,6 +38,7 @@
 		271521DC25FE6189008C0BCC /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		271A941725C8FA0400263981 /* CreateItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemViewController.swift; sourceTree = "<group>"; };
 		27403EAC25D30D8D00A779FD /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		27475EE826859DBB007B2A11 /* TrackingTransparencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTransparencyManager.swift; sourceTree = "<group>"; };
 		27583C9125C887A100FE314D /* Boxes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27583C9425C887A100FE314D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27583C9625C887A100FE314D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				27583CBC25C88E8F00FE314D /* MyCollectionViewCell.swift */,
 				275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */,
 				27C7986826003B3C00D10D1A /* HapitcsManager.swift */,
+				27475EE826859DBB007B2A11 /* TrackingTransparencyManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				27813AC725E895400066CB32 /* CustomBoxViewController.swift in Sources */,
 				27583CBA25C88E5100FE314D /* Quotes.swift in Sources */,
 				27583CB725C88DF200FE314D /* ItemsTableViewController.swift in Sources */,
+				27475EE926859DBB007B2A11 /* TrackingTransparencyManager.swift in Sources */,
 				27583C9725C887A100FE314D /* SceneDelegate.swift in Sources */,
 				27E3459E25CC7A5C009696B1 /* AlertModels.swift in Sources */,
 				27583C9F25C887A100FE314D /* Boxes.xcdatamodeld in Sources */,
@@ -372,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -427,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -446,7 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPPGXZ3Y59;
 				INFOPLIST_FILE = Boxes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPPGXZ3Y59;
 				INFOPLIST_FILE = Boxes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

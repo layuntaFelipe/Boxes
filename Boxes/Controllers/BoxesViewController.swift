@@ -27,6 +27,8 @@ class BoxesViewController: UIViewController {
     
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    private var trackingTransparency = TrackingTransparency()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
@@ -47,6 +49,7 @@ class BoxesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Get a random quote and show on view
         quoteView?.text = quotes.getRandom()
         // Get the collectionView Ready
