@@ -19,9 +19,8 @@
 - Swift 5 :bird:
 - CoreData :floppy_disk:
 - UserNotifications :alarm_clock:
-- CoreAnimation
+- CoreAnimation :art:
 - CocoaPods: [ISEmojiView](https://github.com/isaced/ISEmojiView), [ChameleonFramework](https://github.com/vicc/Chameleon)
-- Animation with UIKit :art:
 - MVC Design Pattern :books:
 - Auto-Layout :triangular_ruler:
 
