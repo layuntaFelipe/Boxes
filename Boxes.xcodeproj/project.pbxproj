@@ -25,6 +25,12 @@
 		27583CBF25C88E8F00FE314D /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27583CBD25C88E8F00FE314D /* MyCollectionViewCell.xib */; };
 		275A2AC125CDA88A0042CFC1 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */; };
 		275A2AC225CDA88A0042CFC1 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275A2AC025CDA88A0042CFC1 /* MyTableViewCell.xib */; };
+		27604EFB26B249CA00F56A17 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27604EFA26B249CA00F56A17 /* OnboardingViewController.swift */; };
+		27604EFE26B2503400F56A17 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27604EFD26B2503400F56A17 /* UIViewExtension.swift */; };
+		27604F0026B250EB00F56A17 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27604EFF26B250EB00F56A17 /* OnboardingSlide.swift */; };
+		27604F0226B252A600F56A17 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27604F0126B252A600F56A17 /* OnboardingCollectionViewCell.swift */; };
+		27604F0426B26CB200F56A17 /* ShowOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27604F0326B26CB200F56A17 /* ShowOnboardingViewController.swift */; };
+		27604F0626B275D400F56A17 /* UserDefaultExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27604F0526B275D400F56A17 /* UserDefaultExtention.swift */; };
 		27813AC725E895400066CB32 /* CustomBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27813AC625E895400066CB32 /* CustomBoxViewController.swift */; };
 		27813ACA25E895600066CB32 /* CustomBoxView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27813AC925E895600066CB32 /* CustomBoxView.storyboard */; };
 		2792C61025EC1BC9001435C7 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792C60F25EC1BC9001435C7 /* ReminderModel.swift */; };
@@ -54,6 +60,12 @@
 		27583CBD25C88E8F00FE314D /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		275A2AC025CDA88A0042CFC1 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		27604EFA26B249CA00F56A17 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		27604EFD26B2503400F56A17 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		27604EFF26B250EB00F56A17 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		27604F0126B252A600F56A17 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		27604F0326B26CB200F56A17 /* ShowOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOnboardingViewController.swift; sourceTree = "<group>"; };
+		27604F0526B275D400F56A17 /* UserDefaultExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtention.swift; sourceTree = "<group>"; };
 		27813AC625E895400066CB32 /* CustomBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBoxViewController.swift; sourceTree = "<group>"; };
 		27813AC925E895600066CB32 /* CustomBoxView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomBoxView.storyboard; sourceTree = "<group>"; };
 		2792C60F25EC1BC9001435C7 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
@@ -97,6 +109,7 @@
 		27583C9325C887A100FE314D /* Boxes */ = {
 			isa = PBXGroup;
 			children = (
+				27604EFC26B2501400F56A17 /* Extensions */,
 				27583CB425C88D7800FE314D /* Models */,
 				27583CB325C88D7000FE314D /* Views */,
 				27583CB225C88D6600FE314D /* Controllers */,
@@ -111,6 +124,7 @@
 		27583CB225C88D6600FE314D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27604EF926B249B200F56A17 /* Onboarding */,
 				27403EAC25D30D8D00A779FD /* AnimationViewController.swift */,
 				27583C9825C887A100FE314D /* BoxesViewController.swift */,
 				27813AC625E895400066CB32 /* CustomBoxViewController.swift */,
@@ -145,8 +159,28 @@
 				275A2ABF25CDA88A0042CFC1 /* MyTableViewCell.swift */,
 				27C7986826003B3C00D10D1A /* HapitcsManager.swift */,
 				27475EE826859DBB007B2A11 /* TrackingTransparencyManager.swift */,
+				27604EFF26B250EB00F56A17 /* OnboardingSlide.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		27604EF926B249B200F56A17 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				27604EFA26B249CA00F56A17 /* OnboardingViewController.swift */,
+				27604F0126B252A600F56A17 /* OnboardingCollectionViewCell.swift */,
+				27604F0326B26CB200F56A17 /* ShowOnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		27604EFC26B2501400F56A17 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27604EFD26B2503400F56A17 /* UIViewExtension.swift */,
+				27604F0526B275D400F56A17 /* UserDefaultExtention.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6CA387FCA2C016FFC1AA8C30 /* Pods */ = {
@@ -287,15 +321,21 @@
 				27583C9925C887A100FE314D /* BoxesViewController.swift in Sources */,
 				27583CBE25C88E8F00FE314D /* MyCollectionViewCell.swift in Sources */,
 				27403EAD25D30D8D00A779FD /* AnimationViewController.swift in Sources */,
+				27604EFB26B249CA00F56A17 /* OnboardingViewController.swift in Sources */,
 				27583C9525C887A100FE314D /* AppDelegate.swift in Sources */,
 				275A2AC125CDA88A0042CFC1 /* MyTableViewCell.swift in Sources */,
+				27604EFE26B2503400F56A17 /* UIViewExtension.swift in Sources */,
+				27604F0226B252A600F56A17 /* OnboardingCollectionViewCell.swift in Sources */,
 				2792C61025EC1BC9001435C7 /* ReminderModel.swift in Sources */,
+				27604F0626B275D400F56A17 /* UserDefaultExtention.swift in Sources */,
 				27C7986926003B3C00D10D1A /* HapitcsManager.swift in Sources */,
 				271521DD25FE6189008C0BCC /* PopUpViewController.swift in Sources */,
+				27604F0426B26CB200F56A17 /* ShowOnboardingViewController.swift in Sources */,
 				271A941825C8FA0400263981 /* CreateItemViewController.swift in Sources */,
 				27813AC725E895400066CB32 /* CustomBoxViewController.swift in Sources */,
 				27583CBA25C88E5100FE314D /* Quotes.swift in Sources */,
 				27583CB725C88DF200FE314D /* ItemsTableViewController.swift in Sources */,
+				27604F0026B250EB00F56A17 /* OnboardingSlide.swift in Sources */,
 				27475EE926859DBB007B2A11 /* TrackingTransparencyManager.swift in Sources */,
 				27583C9725C887A100FE314D /* SceneDelegate.swift in Sources */,
 				27E3459E25CC7A5C009696B1 /* AlertModels.swift in Sources */,
