@@ -69,9 +69,7 @@ class CreateItemViewController: UIViewController {
     }
     
     func localCreateItem(title: String, text: String) -> [String] {
-        
         return [title, text]
-        
     }
     
     @IBAction func switchButtonPressed(_ sender: UISwitch) {

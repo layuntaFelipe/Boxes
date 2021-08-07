@@ -593,7 +593,7 @@
                                 <rect key="frame" x="132" y="772" width="150" height="50"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="l1W-0d-MRd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="l1W-0d-MRd"/>
                                     <constraint firstAttribute="height" constant="50" id="wmk-Mf-bSy"/>
                                 </constraints>
                                 <state key="normal" title="Next">

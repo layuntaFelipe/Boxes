@@ -14,11 +14,13 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var descriptionView: UILabel!
     @IBOutlet weak var dateView: UILabel!
     @IBOutlet weak var popUpView: UIView!
+    @IBOutlet weak var backgroundV: UIView!
     
-    var popUpTitle = String()
-    var popUpDescription = String()
-    var popUpDate : String?
-    var color = UIColor()
+    internal var popUpTitle = String()
+    internal var popUpDescription = String()
+    internal var popUpDate : String?
+    internal var color = UIColor()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +29,8 @@ class PopUpViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
         popUpView.layer.cornerRadius = 10
-        popUpView.layer.borderWidth = 3
-        popUpView.layer.borderColor = UIColor.lightGray.cgColor
+        popUpView.layer.borderWidth = 2
+        popUpView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.15).cgColor
         
         setupView()
     }
