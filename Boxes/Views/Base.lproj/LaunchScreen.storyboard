@@ -28,7 +28,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Wwm-Aq-o26">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon2" translatesAutoresizingMaskIntoConstraints="NO" id="Wwm-Aq-o26">
                                 <rect key="frame" x="142" y="383" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="DQB-d1-u94"/>
@@ -65,7 +65,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon" width="170.5" height="170.5"/>
+        <image name="icon2" width="166.5" height="166.5"/>
         <namedColor name="buttonColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
