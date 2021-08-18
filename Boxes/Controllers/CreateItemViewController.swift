@@ -103,7 +103,7 @@ class CreateItemViewController: UIViewController {
         print("dismissing newView")
         let alert = Alert()
         if titleTextField.text == nil || titleTextField.text == "" {
-            alert.alert(vc: self, title: "What? No Title?", message: "How would you do nothing?... Serious man, get help... ;)", style: .alert)
+            let _ = alert.alert(vc: self, title: "What? No Title?", message: "How would you do nothing?... Serious man, get help... ;)", style: .alert)
         } else {
             performSegue(withIdentifier: "ExitCreateItem", sender: self)
         }

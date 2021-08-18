@@ -27,8 +27,7 @@ class BoxesViewController: UIViewController {
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
         navigationItem.rightBarButtonItem?.tintColor = titleColor
         navigationController?.navigationBar.tintColor = titleColor
-        //Adding the trackingTransparency 
-        trackingTransparency.initiateTracking()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {

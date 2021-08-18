@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDE-2Y-VkY">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDE-2Y-VkY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.10420877950174826" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-iz-uKu">
@@ -66,6 +65,10 @@
                         <viewLayoutGuide key="safeArea" id="0CM-Ob-itO"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="fDE-2Y-VkY" firstAttribute="top" secondItem="lBd-Id-slB" secondAttribute="top" id="GTb-ys-9o0"/>
+                            <constraint firstItem="fDE-2Y-VkY" firstAttribute="leading" secondItem="0CM-Ob-itO" secondAttribute="leading" id="b6L-1R-ryI"/>
+                            <constraint firstItem="fDE-2Y-VkY" firstAttribute="trailing" secondItem="0CM-Ob-itO" secondAttribute="trailing" id="c3a-1C-TIN"/>
+                            <constraint firstAttribute="bottom" secondItem="fDE-2Y-VkY" secondAttribute="bottom" id="cO7-Mx-3IA"/>
                             <constraint firstItem="Pda-iz-uKu" firstAttribute="centerY" secondItem="lBd-Id-slB" secondAttribute="centerY" id="u13-7r-5Bv"/>
                             <constraint firstItem="Pda-iz-uKu" firstAttribute="centerX" secondItem="lBd-Id-slB" secondAttribute="centerX" id="uxu-Dv-Odo"/>
                         </constraints>

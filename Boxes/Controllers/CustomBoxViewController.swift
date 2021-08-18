@@ -68,9 +68,11 @@ class CustomBoxViewController: UIViewController{
         let alert = Alert()
         
         if nameTextView.text == nil || nameTextView.text == "" {
-            alert.alert(vc: self, title: "What? No Title?", message: "How would you put something on nothing?... Serious man, get help... ;)", style: .alert)
+            let _ = alert.alert(vc: self, title: "What? No Title?", message: "How would you put something on nothing?... Serious man, get help... ;)", style: .alert)
         } else if textView.text == nil || textView.text == "" {
-            alert.alert(vc: self, title: "What? No Icon?", message: "How would you place something whithout a icon?", style: .alert)
+            let _ = alert.alert(vc: self, title: "What? No Icon?", message: "How would you place something whithout a icon?", style: .alert)
+        } else if textView.text!.count > 1 {
+            let _ = alert.alert(vc: self, title: "Please choose one icon", message: "For the better style of the app, please select just one icon", style: .alert)
         } else {
             performSegue(withIdentifier: "ExitBox", sender: self)
             print("Doing the perform")
