@@ -33,6 +33,7 @@
 6. After creating those relationships and the custom views for the creation of a "box" with it's title, it's emoji using [ISEmojiView](https://github.com/isaced/ISEmojiView), and it's random color using [ChameleonFramework](https://github.com/vicc/Chameleon), when you are inside a "box" you can createyou notice that the screen is the same color of the box you created, and as you continuie to create items, the color of each item cell beggins to get darker and darker, but the text color is always in contrast for better visibility, that's all using the [ChameleonFramework](https://github.com/vicc/Chameleon);
 7. When you create a item you can choose if it's a DeadLine, that is, you got to do that item before that date and time; When you chose a DeadLine, and with the help of UserNotifications I was able to everytime the user creates a deadLine, it also creates a reminder with that same deadline, so it notifies the user when the time comes, and also when you mark the item as complete, it deletes that reminder, but if you mark as incomplete again, it recreates that reminder;
 
+### You can download the app now on the AppStore by just searching for "Boxes - Todolist"
+
 ## Overall
 It was a great learning expirence I'm sure, learning how to search on the web how to solve a problem, how to implement something, searching for a good Pod for the project, organizing the CoreData and it's relationships, how to pass those data through different views, making it "talk" to each other, working with UserNotification, CoreAnimations...
-You can download the app now on the AppStore by just searching for "Boxes - Todolist"
