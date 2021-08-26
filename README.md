@@ -35,4 +35,4 @@
 
 ## Overall
 It was a great learning expirence I'm sure, learning how to search on the web how to solve a problem, how to implement something, searching for a good Pod for the project, organizing the CoreData and it's relationships, how to pass those data through different views, making it "talk" to each other, working with UserNotification, CoreAnimations...
-Although the app it's done for using on the phone, I did not launched on Apple Store yet, one of the reasons it's because I wanted to make some slight motivication involving the UserNotification and the quotes data, and there is a few bugs to fix, but overall, it's good to go, and I'm sure the user expirience would be different from those other Todo-list apps that we have on the market :grin:
+You can download the app now on the AppStore by just searching for "Boxes - Todolist"
